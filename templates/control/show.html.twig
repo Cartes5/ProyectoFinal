@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Control{% endblock %}
+
+{% block body %}
+    <h1>Control</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ control.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre_Taller</th>
+                <td>{{ control.NombreTaller }}</td>
+            </tr>
+            <tr>
+                <th>Numero_Factura</th>
+                <td>{{ control.NumeroFactura }}</td>
+            </tr>
+            <tr>
+                <th>Precio_Factura</th>
+                <td>{{ control.PrecioFactura }}</td>
+            </tr>
+            <tr>
+                <th>Multas</th>
+                <td>{{ control.Multas }}</td>
+            </tr>
+            <tr>
+                <th>Numero_Multas</th>
+                <td>{{ control.NumeroMultas }}</td>
+            </tr>
+            <tr>
+                <th>Cantidad_Multas</th>
+                <td>{{ control.CantidadMultas }}</td>
+            </tr>
+            <tr>
+                <th>Equipamiento</th>
+                <td>{{ control.Equipamiento }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_control_index') }}">back to list</a>
+
+    <a href="{{ path('app_control_edit', {'id': control.id}) }}">edit</a>
+
+    {{ include('control/_delete_form.html.twig') }}
+{% endblock %}

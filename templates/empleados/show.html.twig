@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Empleados{% endblock %}
+
+{% block body %}
+    <h1>Empleados</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ empleado.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ empleado.Nombre }}</td>
+            </tr>
+            <tr>
+                <th>Apellidos</th>
+                <td>{{ empleado.Apellidos }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ empleado.Email }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ empleado.Telefono }}</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>{{ empleado.Direccion }}</td>
+            </tr>
+            <tr>
+                <th>Codigo_Postal</th>
+                <td>{{ empleado.CodigoPostal }}</td>
+            </tr>
+            <tr>
+                <th>Fecha_Nacimiento</th>
+                <td>{{ empleado.FechaNacimiento ? empleado.FechaNacimiento|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>NIF</th>
+                <td>{{ empleado.NIF }}</td>
+            </tr>
+            <tr>
+                <th>Localidad</th>
+                <td>{{ empleado.Localidad }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_empleados_index') }}">back to list</a>
+
+    <a href="{{ path('app_empleados_edit', {'id': empleado.id}) }}">edit</a>
+
+    {{ include('empleados/_delete_form.html.twig') }}
+{% endblock %}

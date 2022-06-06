@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coches index{% endblock %}
+
+{% block body %}
+    <h1>Coches index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Color</th>
+                <th>Numero_Bastidor</th>
+                <th>Fecha_ITV</th>
+                <th>Fecha_Matriculacion</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coch in coches %}
+            <tr>
+                <td>{{ coch.id }}</td>
+                <td>{{ coch.Marca }}</td>
+                <td>{{ coch.Modelo }}</td>
+                <td>{{ coch.Color }}</td>
+                <td>{{ coch.NumeroBastidor }}</td>
+                <td>{{ coch.FechaITV ? coch.FechaITV|date('Y-m-d') : '' }}</td>
+                <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_coches_show', {'id': coch.id}) }}">show</a>
+                    <a href="{{ path('app_coches_edit', {'id': coch.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_coches_new') }}">Create new</a>
+{% endblock %}

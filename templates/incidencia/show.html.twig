@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Incidencia{% endblock %}
+
+{% block body %}
+    <h1>Incidencia</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ incidencium.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ incidencium.Nombre }}</td>
+            </tr>
+            <tr>
+                <th>Apellidos</th>
+                <td>{{ incidencium.Apellidos }}</td>
+            </tr>
+            <tr>
+                <th>Departamento</th>
+                <td>{{ incidencium.Departamento }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ incidencium.Descripcion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_incidencia_index') }}">back to list</a>
+
+    <a href="{{ path('app_incidencia_edit', {'id': incidencium.id}) }}">edit</a>
+
+    {{ include('incidencia/_delete_form.html.twig') }}
+{% endblock %}

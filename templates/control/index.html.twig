@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Control index{% endblock %}
+
+{% block body %}
+    <h1>Control index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre_Taller</th>
+                <th>Numero_Factura</th>
+                <th>Precio_Factura</th>
+                <th>Multas</th>
+                <th>Numero_Multas</th>
+                <th>Cantidad_Multas</th>
+                <th>Equipamiento</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for control in controls %}
+            <tr>
+                <td>{{ control.id }}</td>
+                <td>{{ control.NombreTaller }}</td>
+                <td>{{ control.NumeroFactura }}</td>
+                <td>{{ control.PrecioFactura }}</td>
+                <td>{{ control.Multas }}</td>
+                <td>{{ control.NumeroMultas }}</td>
+                <td>{{ control.CantidadMultas }}</td>
+                <td>{{ control.Equipamiento }}</td>
+                <td>
+                    <a href="{{ path('app_control_show', {'id': control.id}) }}">show</a>
+                    <a href="{{ path('app_control_edit', {'id': control.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_control_new') }}">Create new</a>
+{% endblock %}

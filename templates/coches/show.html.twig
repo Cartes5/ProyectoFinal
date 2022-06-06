@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coches{% endblock %}
+
+{% block body %}
+    <h1>Coches</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ coch.id }}</td>
+            </tr>
+            <tr>
+                <th>Marca</th>
+                <td>{{ coch.Marca }}</td>
+            </tr>
+            <tr>
+                <th>Modelo</th>
+                <td>{{ coch.Modelo }}</td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>{{ coch.Color }}</td>
+            </tr>
+            <tr>
+                <th>Numero_Bastidor</th>
+                <td>{{ coch.NumeroBastidor }}</td>
+            </tr>
+            <tr>
+                <th>Fecha_ITV</th>
+                <td>{{ coch.FechaITV ? coch.FechaITV|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Fecha_Matriculacion</th>
+                <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_coches_index') }}">back to list</a>
+
+    <a href="{{ path('app_coches_edit', {'id': coch.id}) }}">edit</a>
+
+    {{ include('coches/_delete_form.html.twig') }}
+{% endblock %}

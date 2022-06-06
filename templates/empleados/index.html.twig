@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Empleados index{% endblock %}
+
+{% block body %}
+    <h1>Empleados index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Direccion</th>
+                <th>Codigo_Postal</th>
+                <th>Fecha_Nacimiento</th>
+                <th>NIF</th>
+                <th>Localidad</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for empleado in empleados %}
+            <tr>
+                <td>{{ empleado.id }}</td>
+                <td>{{ empleado.Nombre }}</td>
+                <td>{{ empleado.Apellidos }}</td>
+                <td>{{ empleado.Email }}</td>
+                <td>{{ empleado.Telefono }}</td>
+                <td>{{ empleado.Direccion }}</td>
+                <td>{{ empleado.CodigoPostal }}</td>
+                <td>{{ empleado.FechaNacimiento ? empleado.FechaNacimiento|date('Y-m-d') : '' }}</td>
+                <td>{{ empleado.NIF }}</td>
+                <td>{{ empleado.Localidad }}</td>
+                <td>
+                    <a href="{{ path('app_empleados_show', {'id': empleado.id}) }}">show</a>
+                    <a href="{{ path('app_empleados_edit', {'id': empleado.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_empleados_new') }}">Create new</a>
+{% endblock %}
