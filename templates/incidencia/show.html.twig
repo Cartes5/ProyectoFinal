@@ -1,38 +1,57 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Incidencia{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('incidencia') }}
+    <style>
+
+    </style>
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
 
 {% block body %}
-    <h1>Incidencia</h1>
+<div class="incidencia-container">
+    <div id="incidencia-checkout1">
+        <h1>Incidencia</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ incidencium.id }}</td>
-            </tr>
-            <tr>
-                <th>Nombre</th>
-                <td>{{ incidencium.Nombre }}</td>
-            </tr>
-            <tr>
-                <th>Apellidos</th>
-                <td>{{ incidencium.Apellidos }}</td>
-            </tr>
-            <tr>
-                <th>Departamento</th>
-                <td>{{ incidencium.Departamento }}</td>
-            </tr>
-            <tr>
-                <th>Descripcion</th>
-                <td>{{ incidencium.Descripcion }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <form class="incidencia-form" action="submit">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Id</th>
+                            <td>{{ incidencium.id }}</td>
+                        </tr>
+                        <tr>
+                            <th>Nombre</th>
+                            <td>{{ incidencium.Nombre }}</td>
+                        </tr>
+                        <tr>
+                            <th>Apellidos</th>
+                            <td>{{ incidencium.Apellidos }}</td>
+                        </tr>
+                        <tr>
+                            <th>Departamento</th>
+                            <td>{{ incidencium.Departamento }}</td>
+                        </tr>
+                        <tr>
+                            <th>Descripcion</th>
+                            <td>{{ incidencium.Descripcion }}</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-    <a href="{{ path('app_incidencia_index') }}">back to list</a>
+                <button id="incidencia-button" class="btn btn-block btn-success submit-button" type="submit">
+                    <a href="{{ path('app_incidencia_index') }}">Volver Lista</a>
+                </button>
 
-    <a href="{{ path('app_incidencia_edit', {'id': incidencium.id}) }}">edit</a>
+                <button id="incidencia-button" class="btn btn-block btn-success submit-button" type="submit">
+                    <a href="{{ path('app_incidencia_edit', {'id': incidencium.id}) }}">Editar</a>
+                </button>
 
-    {{ include('incidencia/_delete_form.html.twig') }}
+                {{ include('incidencia/_delete_form.html.twig') }}
+        </form>
+    </div> 
+</div>
 {% endblock %}

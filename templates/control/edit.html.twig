@@ -1,13 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Control{% endblock %}
+{% block title %}Editar Registro{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('control') }}
+    <style>
+    
+    </style>
+{% endblock %}
 
 {% block body %}
-    <h1>Edit Control</h1>
+<div class="mantenimiento-container">
+  <div id="mantenimiento-checkout1">
+    <h1>Editar Registro</h1>
 
-    {{ include('control/_form.html.twig', {'button_label': 'Update'}) }}
+    <form class="mantenimiento-form" action="submit">
+        {{ include('control/_form.html.twig', {'button_label': 'Actualizar'}) }}
+        <br>
+        <br>
 
-    <a href="{{ path('app_control_index') }}">back to list</a>
+        <button id="mantenimiento-button" class="btn btn-block btn-success submit-button" type="submit">
+            <a href="{{ path('app_control_index') }}">Volver Lista</a>
+        </button>
 
-    {{ include('control/_delete_form.html.twig') }}
+        {{ include('control/_delete_form.html.twig') }}
+     </form>
+    </div>
+</div>
+
 {% endblock %}

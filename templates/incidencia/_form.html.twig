@@ -1,4 +1,6 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <button id="incidencia-button" class="btn btn-block btn-success submit-button" type="submit">{{ button_label|default('Guardar') }}</button>
+    <br>
+     <img class="imagenincidencia" src="{{ asset('images/incidencia.png') }}" alt="Symfony!" />
 {{ form_end(form) }}

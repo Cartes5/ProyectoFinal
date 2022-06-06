@@ -1,11 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Empleados{% endblock %}
+{% block title %}Nuevos Empleados{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('empleados') }}
+    <style>
+    
+    </style>
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Empleados</h1>
+<div class="empleado-container">
+  <div id="empleado-checkout1">
+    <h1>Crear Nuevos Empleados</h1>
 
-    {{ include('empleados/_form.html.twig') }}
+    <form class="empleado-form" action="submit">
+        {{ include('empleados/_form.html.twig') }}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
-    <a href="{{ path('app_empleados_index') }}">back to list</a>
+        <button id="empleado-button" class="btn btn-block btn-success submit-button" type="submit">
+            <a href="{{ path('app_empleados_index') }}">Volver Lista</a>
+        </button>
+     </form>
+  </div>
+</div>
 {% endblock %}

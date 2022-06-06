@@ -1,11 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Control{% endblock %}
+{% block title %}Nuevo Registro{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('control') }}
+    <style>
+    
+    </style>
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Control</h1>
+<div class="mantenimiento-container">
+  <div id="mantenimiento-checkout1">
+    <h1>Crear Nuevo Registro</h1>
 
-    {{ include('control/_form.html.twig') }}
-
-    <a href="{{ path('app_control_index') }}">back to list</a>
+    <form class="mantenimiento-form" action="submit">
+        {{ include('control/_form.html.twig') }}
+        <br>
+        <br>
+        
+        <button id="mantenimiento-button" class="btn btn-block btn-success submit-button" type="submit">
+         <a href="{{ path('app_control_index') }}">Volver Lista</a>
+        </button>
+    </form>
+  </div>
+</div>
 {% endblock %}

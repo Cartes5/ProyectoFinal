@@ -1,11 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Incidencia{% endblock %}
+{% block title %}Nueva Incidencia{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('incidencia') }}
+    <style>
+
+    </style>
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
 
 {% block body %}
-    <h1>Create new Incidencia</h1>
+<div class="incidencia-container">
+  <div id="incidencia-checkout">
+        <h1>Crear Nueva Incidencia</h1>
 
-    {{ include('incidencia/_form.html.twig') }}
+        <form class="incidencia-form" action="submit">
 
-    <a href="{{ path('app_incidencia_index') }}">back to list</a>
+            {{ include('incidencia/_form.html.twig') }}
+
+            <button id="incidencia-button" class="btn btn-block btn-success submit-button" type="submit">
+                <a href="{{ path('app_incidencia_index') }}">Volver Lista</a>
+            </button>
+
+            
+        </form>
+    </div>
+    
+</div>
 {% endblock %}

@@ -1,11 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Coches{% endblock %}
+{% block title %}Nuevos Vehiculos{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('coches') }}
+    <style>
+    
+    </style>
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Coches</h1>
+<div class="vehiculos-container">
+  <div id="vehiculos-checkout1">
+    <h1>Crear Nuevos Vehiculos</h1>
 
-    {{ include('coches/_form.html.twig') }}
+    <form class="vehiculos-form" action="submit">
+        {{ include('coches/_form.html.twig') }}
+        <br>
+        <br>
+        <br>
+        <br>
 
-    <a href="{{ path('app_coches_index') }}">back to list</a>
+        <button id="vehiculos-button" class="btn btn-block btn-success submit-button" type="submit">
+            <a href="{{ path('app_coches_index') }}">Volver Lista</a>
+        </button>
+    </form>
+  </div>
+</div>
 {% endblock %}

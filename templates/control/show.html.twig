@@ -1,50 +1,67 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Control{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('control') }}
+    <style>
+    
+    </style>
+{% endblock %}
 
 {% block body %}
-    <h1>Control</h1>
+<div class="mantenimiento-container">
+    <div id="mantenimiento-checkout1">
+        <h1>Mantenimiento</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ control.id }}</td>
-            </tr>
-            <tr>
-                <th>Nombre_Taller</th>
-                <td>{{ control.NombreTaller }}</td>
-            </tr>
-            <tr>
-                <th>Numero_Factura</th>
-                <td>{{ control.NumeroFactura }}</td>
-            </tr>
-            <tr>
-                <th>Precio_Factura</th>
-                <td>{{ control.PrecioFactura }}</td>
-            </tr>
-            <tr>
-                <th>Multas</th>
-                <td>{{ control.Multas }}</td>
-            </tr>
-            <tr>
-                <th>Numero_Multas</th>
-                <td>{{ control.NumeroMultas }}</td>
-            </tr>
-            <tr>
-                <th>Cantidad_Multas</th>
-                <td>{{ control.CantidadMultas }}</td>
-            </tr>
-            <tr>
-                <th>Equipamiento</th>
-                <td>{{ control.Equipamiento }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <form class="mantenimiento-form" action="submit">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ control.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nombre_Taller</th>
+                        <td>{{ control.NombreTaller }}</td>
+                    </tr>
+                    <tr>
+                        <th>Numero_Factura</th>
+                        <td>{{ control.NumeroFactura }}</td>
+                    </tr>
+                    <tr>
+                        <th>Precio_Factura</th>
+                        <td>{{ control.PrecioFactura }}</td>
+                    </tr>
+                    <tr>
+                        <th>Multas</th>
+                        <td>{{ control.Multas }}</td>
+                    </tr>
+                    <tr>
+                        <th>Numero_Facturas</th>
+                        <td>{{ control.NumeroFacturas }}</td>
+                    </tr>
+                    <tr>
+                        <th>Cantidad_Multas</th>
+                        <td>{{ control.CantidadMultas }}</td>
+                    </tr>
+                    <tr>
+                        <th>Equipamiento</th>
+                        <td>{{ control.Equipamiento }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="mantenimiento-button" class="btn btn-block btn-success submit-button" type="submit">
+                <a href="{{ path('app_control_index') }}">Volver Lista</a>
+            </button>
 
-    <a href="{{ path('app_control_index') }}">back to list</a>
+            <button id="mantenimiento-button" class="btn btn-block btn-success submit-button" type="submit">
+                <a href="{{ path('app_control_edit', {'id': control.id}) }}">Editar</a>
+            </button>
+            {{ include('control/_delete_form.html.twig') }}
+        </form>
+    </div>
+</div>
 
-    <a href="{{ path('app_control_edit', {'id': control.id}) }}">edit</a>
-
-    {{ include('control/_delete_form.html.twig') }}
+        
 {% endblock %}

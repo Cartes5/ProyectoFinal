@@ -1,51 +1,81 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Empleados index{% endblock %}
+{% block title %}Empleados{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('empleados') }}
+    <style>
+    
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
 
 {% block body %}
-    <h1>Empleados index</h1>
+<div class="empleado-container">
+    <div id="empleado-checkout">
+        <h1>Empleados</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Email</th>
-                <th>Telefono</th>
-                <th>Direccion</th>
-                <th>Codigo_Postal</th>
-                <th>Fecha_Nacimiento</th>
-                <th>NIF</th>
-                <th>Localidad</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for empleado in empleados %}
-            <tr>
-                <td>{{ empleado.id }}</td>
-                <td>{{ empleado.Nombre }}</td>
-                <td>{{ empleado.Apellidos }}</td>
-                <td>{{ empleado.Email }}</td>
-                <td>{{ empleado.Telefono }}</td>
-                <td>{{ empleado.Direccion }}</td>
-                <td>{{ empleado.CodigoPostal }}</td>
-                <td>{{ empleado.FechaNacimiento ? empleado.FechaNacimiento|date('Y-m-d') : '' }}</td>
-                <td>{{ empleado.NIF }}</td>
-                <td>{{ empleado.Localidad }}</td>
-                <td>
-                    <a href="{{ path('app_empleados_show', {'id': empleado.id}) }}">show</a>
-                    <a href="{{ path('app_empleados_edit', {'id': empleado.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="11">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <form class="empleado-form" action="submit">
 
-    <a href="{{ path('app_empleados_new') }}">Create new</a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Email</th>
+                        <th>Telefono</th>
+                        <th>Direccion</th>
+                        <th>Codigo Postal</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>NIF</th>
+                        <th>Localidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for empleado in empleados %}
+                    <tr>
+                        <td>{{ empleado.id }}</td>
+                        <td>{{ empleado.Nombre }}</td>
+                        <td>{{ empleado.Apellidos }}</td>
+                        <td>{{ empleado.Email }}</td>
+                        <td>{{ empleado.Telefono }}</td>
+                        <td>{{ empleado.Direccion }}</td>
+                        <td>{{ empleado.CodigoPostal }}</td>
+                        <td>{{ empleado.FechaNacimiento ? empleado.FechaNacimiento|date('Y-m-d') : '' }}</td>
+                        <td>{{ empleado.NIF }}</td>
+                        <td>{{ empleado.Localidad }}</td>
+                        <td>
+
+                        <button id="empleado-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                            <a href="{{ path('app_empleados_show', {'id': empleado.id}) }}">Mostrar</a>
+                        </button>
+
+                        <button id="empleado-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                            <a href="{{ path('app_empleados_edit', {'id': empleado.id}) }}">Editar</a>
+                        </button>
+
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="11">No se encontraron resultados</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <button id="empleado-button" class="btn btn-block btn-success submit-button" type="submit">
+                <a href="{{ path('app_empleados_new') }}">Crear Nuevo</a>
+            </button>
+        </form>
+
+
+    </div>
+    
+</div>
 {% endblock %}

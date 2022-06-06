@@ -1,41 +1,64 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Incidencia index{% endblock %}
+{% block title %}Incidencia{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('incidencia') }}
+    <style>
+
+    </style>
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
 
 {% block body %}
-    <h1>Incidencia index</h1>
+<div class="incidencia-container">
+    <div id="incidencia-checkout">
+        <h1>Incidencia</h1>
+    
+        <form class="incidencia-form" action="submit">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Departamento</th>
+                        <th>Descripcion</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for incidencium in incidencias %}
+                    <tr>
+                        <td>{{ incidencium.id }}</td>
+                        <td>{{ incidencium.Nombre }}</td>
+                        <td>{{ incidencium.Apellidos }}</td>
+                        <td>{{ incidencium.Departamento }}</td>
+                        <td>{{ incidencium.Descripcion }}</td>
+                        <td>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Departamento</th>
-                <th>Descripcion</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for incidencium in incidencias %}
-            <tr>
-                <td>{{ incidencium.id }}</td>
-                <td>{{ incidencium.Nombre }}</td>
-                <td>{{ incidencium.Apellidos }}</td>
-                <td>{{ incidencium.Departamento }}</td>
-                <td>{{ incidencium.Descripcion }}</td>
-                <td>
-                    <a href="{{ path('app_incidencia_show', {'id': incidencium.id}) }}">show</a>
-                    <a href="{{ path('app_incidencia_edit', {'id': incidencium.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_incidencia_new') }}">Create new</a>
+                        <button id="incidencia-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                            <a href="{{ path('app_incidencia_show', {'id': incidencium.id}) }}">Mostrar</a>
+                        </button>
+                        <button id="incidencia-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                            <a href="{{ path('app_incidencia_edit', {'id': incidencium.id}) }}">Editar</a>
+                        </button>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="6">No se encontraron resultados</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <button id="incidencia-button" class="btn btn-block btn-success submit-button" type="submit">
+                <a href="{{ path('app_incidencia_new') }}">Crear Nuevo</a>
+            </button>
+        </form>
+    </div>
+    
+</div>
 {% endblock %}

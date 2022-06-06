@@ -1,13 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Empleados{% endblock %}
+{% block title %}Editar Empleados{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('empleados') }}
+    <style>
+    
+    </style>
+{% endblock %}
 
 {% block body %}
-    <h1>Edit Empleados</h1>
+<div class="empleado-container">
+  <div id="empleado-checkout1">
+    <h1>Editar Empleados</h1>
+    
+    <form class="empleado-form" action="submit">
 
-    {{ include('empleados/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('app_empleados_index') }}">back to list</a>
-
+    {{ include('empleados/_form.html.twig', {'button_label': 'Actualizar'}) }}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     {{ include('empleados/_delete_form.html.twig') }}
+
+
+        <button id="empleado-button" class="btn btn-block btn-success submit-button" type="submit">
+            <a href="{{ path('app_empleados_index') }}">Volver Lista</a>
+        </button>
+
+    
+    </form>
 {% endblock %}

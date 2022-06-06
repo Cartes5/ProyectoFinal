@@ -1,46 +1,66 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Coches{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('coches') }}
+    <style>
+
+    </style>
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
 
 {% block body %}
+<div class="vehiculos-container">
+  <div id="vehiculos-checkout1">
     <h1>Coches</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ coch.id }}</td>
-            </tr>
-            <tr>
-                <th>Marca</th>
-                <td>{{ coch.Marca }}</td>
-            </tr>
-            <tr>
-                <th>Modelo</th>
-                <td>{{ coch.Modelo }}</td>
-            </tr>
-            <tr>
-                <th>Color</th>
-                <td>{{ coch.Color }}</td>
-            </tr>
-            <tr>
-                <th>Numero_Bastidor</th>
-                <td>{{ coch.NumeroBastidor }}</td>
-            </tr>
-            <tr>
-                <th>Fecha_ITV</th>
-                <td>{{ coch.FechaITV ? coch.FechaITV|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Fecha_Matriculacion</th>
-                <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <form class="vehiculos-form" action="submit">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Id</th>
+                            <td>{{ coch.id }}</td>
+                        </tr>
+                        <tr>
+                            <th>Marca</th>
+                            <td>{{ coch.Marca }}</td>
+                        </tr>
+                        <tr>
+                            <th>Modelo</th>
+                            <td>{{ coch.Modelo }}</td>
+                        </tr>
+                        <tr>
+                            <th>Color</th>
+                            <td>{{ coch.Color }}</td>
+                        </tr>
+                        <tr>
+                            <th>Numero_Bastidor</th>
+                            <td>{{ coch.NumeroBastidor }}</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha_ITV</th>
+                            <td>{{ coch.FechaITV ? coch.FechaITV|date('Y-m-d') : '' }}</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha_Matriculacion</th>
+                            <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-    <a href="{{ path('app_coches_index') }}">back to list</a>
+                <button id="vehiculos-button" class="btn btn-block btn-success submit-button" type="submit">
+                    <a href="{{ path('app_coches_index') }}">Volver Lista</a>
+                </button>
 
-    <a href="{{ path('app_coches_edit', {'id': coch.id}) }}">edit</a>
+                <button id="vehiculos-button" class="btn btn-block btn-success submit-button" type="submit">
+                    <a href="{{ path('app_coches_edit', {'id': coch.id}) }}">Editar</a>
+                </button>
+                {{ include('coches/_delete_form.html.twig') }}
+        </form>
+    </div> 
+</div>
 
-    {{ include('coches/_delete_form.html.twig') }}
+    
 {% endblock %}

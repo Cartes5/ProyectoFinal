@@ -1,45 +1,71 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Coches index{% endblock %}
+{% block title %}Vehiculos{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('coches') }}
+    <style>
+
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}
 
 {% block body %}
-    <h1>Coches index</h1>
+<div class="vehiculos-container">
+  <div id="vehiculos-checkout">
+    <h1>Vehiculos</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Color</th>
-                <th>Numero_Bastidor</th>
-                <th>Fecha_ITV</th>
-                <th>Fecha_Matriculacion</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for coch in coches %}
-            <tr>
-                <td>{{ coch.id }}</td>
-                <td>{{ coch.Marca }}</td>
-                <td>{{ coch.Modelo }}</td>
-                <td>{{ coch.Color }}</td>
-                <td>{{ coch.NumeroBastidor }}</td>
-                <td>{{ coch.FechaITV ? coch.FechaITV|date('Y-m-d') : '' }}</td>
-                <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
-                <td>
-                    <a href="{{ path('app_coches_show', {'id': coch.id}) }}">show</a>
-                    <a href="{{ path('app_coches_edit', {'id': coch.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <form class="vehiculos-form" action="submit">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>NºBastidor</th>
+                    <th>Fecha ITV</th>
+                    <th>Fecha Matriculacion</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for coch in coches %}
+                <tr>
+                    <td>{{ coch.id }}</td>
+                    <td>{{ coch.Marca }}</td>
+                    <td>{{ coch.Modelo }}</td>
+                    <td>{{ coch.Color }}</td>
+                    <td>{{ coch.NumeroBastidor }}</td>
+                    <td>{{ coch.FechaITV ? coch.FechaITV|date('Y-m-d') : '' }}</td>
+                    <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
+                    <td>
 
-    <a href="{{ path('app_coches_new') }}">Create new</a>
+                    <button id="vehiculos-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                        <a href="{{ path('app_coches_show', {'id': coch.id}) }}">Mostrar</a>
+                    </button>
+                    <button id="vehiculos-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                        <a href="{{ path('app_coches_edit', {'id': coch.id}) }}">Editar</a>
+                    </button>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="8">Resultados no encontrados</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <button id="vehiculos-button" class="btn btn-block btn-success submit-button" type="submit">
+            <a href="{{ path('app_coches_new') }}">Crear Nuevo</a>
+        </button>
+    </form>
+  </div>
+    
+</div>
+
 {% endblock %}
