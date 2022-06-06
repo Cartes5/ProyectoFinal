@@ -582,7 +582,15 @@ class ComposerStaticInitd6861a34f4a56b84ed573cc9955db77c
     );
 
     public static $classMap = array (
+        'App\\Entity\\Coches' => __DIR__ . '/../..' . '/src/Entity/Coches.php',
+        'App\\Entity\\Control' => __DIR__ . '/../..' . '/src/Entity/Control.php',
+        'App\\Entity\\Empleados' => __DIR__ . '/../..' . '/src/Entity/Empleados.php',
+        'App\\Entity\\Incidencia' => __DIR__ . '/../..' . '/src/Entity/Incidencia.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\CochesRepository' => __DIR__ . '/../..' . '/src/Repository/CochesRepository.php',
+        'App\\Repository\\ControlRepository' => __DIR__ . '/../..' . '/src/Repository/ControlRepository.php',
+        'App\\Repository\\EmpleadosRepository' => __DIR__ . '/../..' . '/src/Repository/EmpleadosRepository.php',
+        'App\\Repository\\IncidenciaRepository' => __DIR__ . '/../..' . '/src/Repository/IncidenciaRepository.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

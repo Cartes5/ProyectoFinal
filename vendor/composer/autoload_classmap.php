@@ -6,7 +6,15 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Entity\\Coches' => $baseDir . '/src/Entity/Coches.php',
+    'App\\Entity\\Control' => $baseDir . '/src/Entity/Control.php',
+    'App\\Entity\\Empleados' => $baseDir . '/src/Entity/Empleados.php',
+    'App\\Entity\\Incidencia' => $baseDir . '/src/Entity/Incidencia.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
+    'App\\Repository\\CochesRepository' => $baseDir . '/src/Repository/CochesRepository.php',
+    'App\\Repository\\ControlRepository' => $baseDir . '/src/Repository/ControlRepository.php',
+    'App\\Repository\\EmpleadosRepository' => $baseDir . '/src/Repository/EmpleadosRepository.php',
+    'App\\Repository\\IncidenciaRepository' => $baseDir . '/src/Repository/IncidenciaRepository.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

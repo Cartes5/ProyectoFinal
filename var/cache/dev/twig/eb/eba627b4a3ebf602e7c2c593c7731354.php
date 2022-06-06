@@ -29,8 +29,8 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'stylesheets' => [$this, 'block_stylesheets'],
-            'javascripts' => [$this, 'block_javascripts'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -58,20 +58,35 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 11
-        echo "
-        ";
-        // line 12
-        $this->displayBlock('javascripts', $context, $blocks);
+        echo "   
+    </head>
+    <body style=\"\">
+    ";
         // line 15
-        echo "    </head>
-    <body>
+        echo "    ";
+        // line 16
+        echo "    ";
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("renderHeader"));
+        echo "
+    <div>
         ";
-        // line 17
+        // line 19
+        echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 18
-        echo "    </body>
-</html>
-";
+        // line 20
+        echo "        ";
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 22
+        echo " 
+    </div>
+    ";
+        // line 25
+        echo "    ";
+        echo twig_include($this->env, $context, "menufooter.html.twig");
+        echo "
+
+</body>
+</html>";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -122,30 +137,7 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
 
     }
 
-    // line 12
-    public function block_javascripts($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        // line 13
-        echo "            ";
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
-        echo "
-        ";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-        
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
-
-    }
-
-    // line 17
+    // line 19
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -163,14 +155,42 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
 
     }
 
+    // line 20
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 21
+        echo "            ";
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
+        echo "
+        ";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
     public function getTemplateName()
     {
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  149 => 17,  136 => 13,  126 => 12,  113 => 9,  103 => 8,  84 => 5,  72 => 18,  70 => 17,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
+        return array (  169 => 21,  159 => 20,  141 => 19,  128 => 9,  118 => 8,  99 => 5,  84 => 25,  80 => 22,  77 => 20,  74 => 19,  68 => 16,  66 => 15,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -185,15 +205,23 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
-
+   
+    </head>
+    <body style=\"\">
+    {# ESTO INCLUYE LA CABECERA #}
+    {#{ include('menuheader.html.twig') }#}
+    {{ render(url('renderHeader')) }}
+    <div>
+        {# ESTO INCLUYE EL CONTENIDO DE LA PÁGINA EN ESTA CAJA #}
+        {% block body %}{% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
-", "base.html.twig", "/var/www/html/ProyectoFinal/templates/base.html.twig");
+        {% endblock %} 
+    </div>
+    {# ESTO INCLUYE EL PIE DE PÁGINA #}
+    {{ include('menufooter.html.twig') }}
+
+</body>
+</html>", "base.html.twig", "/var/www/html/ProyectoFinal/templates/base.html.twig");
     }
 }

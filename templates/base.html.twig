@@ -8,9 +8,7 @@
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}    
+   
     </head>
     <body style="">
     {# ESTO INCLUYE LA CABECERA #}
@@ -19,6 +17,9 @@
     <div>
         {# ESTO INCLUYE EL CONTENIDO DE LA PÁGINA EN ESTA CAJA #}
         {% block body %}{% endblock %}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %} 
     </div>
     {# ESTO INCLUYE EL PIE DE PÁGINA #}
     {{ include('menufooter.html.twig') }}
