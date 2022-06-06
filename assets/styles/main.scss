@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    position: relative;
+    background: url('http://thecodeplayer.com/u/m/b1.png') no-repeat center center fixed;
+    background-size: cover;
+    min-width: 500px;
+    min-height: 200px;
+    color: #fff;
+    font-family: 'Montserrat';
+    height:30vmax;
+    
+  }
+  
+  #menuToggle
+  {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #232323;
+    
+    transition: color 0.3s ease;
+  }
+  
+  #menuToggle a:hover
+  {
+    color: tomato;
+  }
+  
+  
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; 
+    z-index: 2; 
+    
+    -webkit-touch-callout: none;
+  }
+  
+  #menuToggle span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: #cdcdcd;
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+  
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  
+  
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  #menu
+  {
+    position: absolute;
+    width: 300px;
+    height: 1000px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* Para detener el parpadeo del texto */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  #menu li
+  {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  
+  /*
+   * Deslizar a la izquierda
+   */
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+  };
+
+  
+  /* Principal Body CSS */
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  h3{
+    color: white;
+    font-family: 'Montserrat';
+  }
+
+  h2{
+    color: white;
+    font-family: 'Montserrat';
+  }
+  
+  h1 {
+    font-size: 60px;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    text-transform: uppercase;
+    font-size: 120px;
+    letter-spacing:5px;
+    padding-top:40px;
+  }
+  
+  article p {
+    padding-bottom: 15px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  
+  article a {
+    color: #fff;
+    text-decoration: none;
+    opacity: .2;
+    font-size: 12px;
+  }
+  
+  article a:hover {
+    opacity: .8;
+  }
+  
+  @keyframes top-bar {
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: rotate(45deg) translateY(0);
+    }
+  }
+  
+  @keyframes bottom-bar {
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: rotate(-45deg) translateY(0);
+    }
+  }
+  
+  
+  @media screen and (max-width:800px) {
+  
+    h1 {
+      padding-top:80px;
+      font-size: 60px;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 60px;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    text-transform: uppercase;
+    font-size: 120px;
+    letter-spacing:5px;
+    padding-top:40px;
+  }
+  /*Animcacion vehiculo*/
+  
+  .containercoche{
+    position:relative;
+    width:800px;
+    height:400px;
+    margin:0px auto;
+  }
+  .coche {
+    position: absolute;
+    width: 330px;
+    height: 271px;
+    margin: 220px 0;
+    background: white;
+    border-radius: 50% / 20%;
+    margin:180px 221px;
+    animation: rodar3 .21s alternate infinite;
+  }
+  .coche:before {
+    content: '';
+    position: absolute;
+    top: 9%;
+    bottom: 9%;
+    right: -5%;
+    left: -5%;
+    background: inherit;
+    border-radius: 5% / 50%;
+  }
+  .coche::after {
+    content:"";
+    position: absolute;
+    width: 75px;
+    height: 93px;
+    background: white;
+    border-radius: 50% / 10%;
+    margin: 152px 300px
+  }
+  .ruedas{
+    position:absolute;
+    width:112px;
+    height:60px;
+    border-radius: 112px 112px 0 0;
+    background: black;
+    margin:221px 12px;
+    }
+  .ruedas::before{
+    content:"";
+    position:absolute;
+    width:112px;
+    height:60px;
+    border-radius: 112px 112px 0 0;
+    background:black;
+    margin:0px 192px;
+  }
+  .ventanas{
+    position:absolute;
+    width:172px;
+    height:121px;
+    background: rgba(219,219,219,1);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(219,219,219,1)), color-stop(45%, rgba(219,219,219,1)), color-stop(45%, rgba(233,233,233,1)), color-stop(69%, rgba(233,233,233,1)), color-stop(69%, rgba(233,233,233,1)), color-stop(69%, rgba(219,219,219,1)), color-stop(81%, rgba(219,219,219,1)), color-stop(81%, rgba(233,233,233,1)), color-stop(88%, rgba(233,233,233,1)), color-stop(88%, rgba(219,219,219,1)), color-stop(100%, rgba(219,219,219,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(219,219,219,1) 0%, rgba(219,219,219,1) 45%, rgba(233,233,233,1) 45%, rgba(233,233,233,1) 69%, rgba(233,233,233,1) 69%, rgba(219,219,219,1) 69%, rgba(219,219,219,1) 81%, rgba(233,233,233,1) 81%, rgba(233,233,233,1) 88%, rgba(219,219,219,1) 88%, rgba(219,219,219,1) 100%);
+  background: linear-gradient(135deg, rgba(219,219,219,1) 0%, rgba(219,219,219,1) 45%, rgba(233,233,233,1) 45%, rgba(233,233,233,1) 69%, rgba(233,233,233,1) 69%, rgba(219,219,219,1) 69%, rgba(219,219,219,1) 81%, rgba(233,233,233,1) 81%, rgba(233,233,233,1) 88%, rgba(219,219,219,1) 88%, rgba(219,219,219,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#dbdbdb', GradientType=1 );
+    border-radius:30px;
+    margin:30px 30px;
+  }
+  .ventanas::before{
+    content:"";
+    position:absolute;
+    width: 70px;
+    height:121px;
+    border-radius: 30px 90px 12px 12px;
+    background:#dbdbdb;
+    margin:0px 212px;
+  }
+  .linea{
+    position:absolute;
+    width:412px;
+    height:21px;
+    border-radius: 12px 12px 0 0;
+    background:#ffcdad;
+    margin:182px -21px;
+    z-index:3;
+  }
+  .linea::before{
+    content:"";
+    position:absolute;
+    width:412px;
+    height:12px;
+    border-radius: 0 0 12px 12px;
+    background:#f3ad7e;
+    margin:21px 0px;
+    z-index:3;
+  }
+  ul{
+    position:absolute;
+    width:192px;
+    height:35px;
+    margin:33px -9px;
+    list-style:none;
+  }
+  .ruedas3,.ruedas7{
+    position:absolute;
+    width:100px;
+    height:105px;
+    border-radius:100%;
+    border:21px solid #875e46;
+    background:#ffcdad;
+    transform:rotate(0deg);
+    animation: vueltas .9s linear infinite;
+  }
+  .ruedas3{margin: 231px 23px;}
+  .ruedas7{margin:231px 212px;}
+  .shadow{
+    position:absolute;
+    width:430px;
+    height:121px;
+    background:#c5c5c5;
+    border-radius:30px;
+    margin:430px 172px;
+    animation: rodar 1.2S alternate infinite;
+  
+  }
+  
+  @keyframes rodar5
+  {
+    0% {transform: translateY(12px) rotate(-121deg)}
+    100% {transform: translateY(-30px) rotate(-121deg)}
+  }
+  @keyframes rodar3{
+    0%   { transform: scaleY(.95) translateY(-21px); }
+    100% { transform: scaleY(.85) translateY(21px); }
+  }
+  @keyframes rodar7{
+    0%   { transform: scaleY(.95) translateY(-25px); }
+    100% { transform: scaleY(.85) translateY(21px); }
+  }
+  @keyframes rodar{
+    0%   { transform: scaleX(.95)  }
+    100% { transform: scaleX(.93) }
+  }
+  
+   @keyframes vueltas {
+     0%{transform:rotate(0deg) ;}
+     50% {transform: rotate(-360deg) }
+  }
