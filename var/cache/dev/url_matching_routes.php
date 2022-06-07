@@ -30,12 +30,9 @@ return [
         ],
         '/empleados/new' => [[['_route' => 'app_empleados_new', '_controller' => 'App\\Controller\\EmpleadosController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
-        '/incidencia' => [
-            [['_route' => 'incidencia', '_controller' => 'App\\Controller\\HomeController::incidencia'], null, null, null, false, false, null],
-            [['_route' => 'app_incidencia_index', '_controller' => 'App\\Controller\\IncidenciaController::index'], null, ['GET' => 0], null, true, false, null],
-        ],
         '/render-header' => [[['_route' => 'renderHeader', '_controller' => 'App\\Controller\\HomeController::renderHeader'], null, null, null, false, false, null]],
-        '/incidencia/new' => [[['_route' => 'app_incidencia_new', '_controller' => 'App\\Controller\\IncidenciaController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/incidencias' => [[['_route' => 'app_incidencias_index', '_controller' => 'App\\Controller\\IncidenciasController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/incidencias/new' => [[['_route' => 'app_incidencias_new', '_controller' => 'App\\Controller\\IncidenciasController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -71,10 +68,10 @@ return [
                     .'|/edit(*:304)'
                     .'|(*:312)'
                 .')'
-                .'|/incidencia/([^/]++)(?'
-                    .'|(*:344)'
-                    .'|/edit(*:357)'
-                    .'|(*:365)'
+                .'|/incidencias/([^/]++)(?'
+                    .'|(*:345)'
+                    .'|/edit(*:358)'
+                    .'|(*:366)'
                 .')'
             .')/?$}sDu',
     ],
@@ -95,10 +92,10 @@ return [
         291 => [[['_route' => 'app_empleados_show', '_controller' => 'App\\Controller\\EmpleadosController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         304 => [[['_route' => 'app_empleados_edit', '_controller' => 'App\\Controller\\EmpleadosController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         312 => [[['_route' => 'app_empleados_delete', '_controller' => 'App\\Controller\\EmpleadosController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        344 => [[['_route' => 'app_incidencia_show', '_controller' => 'App\\Controller\\IncidenciaController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        357 => [[['_route' => 'app_incidencia_edit', '_controller' => 'App\\Controller\\IncidenciaController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        365 => [
-            [['_route' => 'app_incidencia_delete', '_controller' => 'App\\Controller\\IncidenciaController::delete'], ['id'], ['POST' => 0], null, false, true, null],
+        345 => [[['_route' => 'app_incidencias_show', '_controller' => 'App\\Controller\\IncidenciasController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        358 => [[['_route' => 'app_incidencias_edit', '_controller' => 'App\\Controller\\IncidenciasController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        366 => [
+            [['_route' => 'app_incidencias_delete', '_controller' => 'App\\Controller\\IncidenciasController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -40,13 +40,6 @@ class HomeController extends AbstractController
         return $this->render('control/index.html.twig');
     }
 
-    /**
-     * @Route("/incidencia", name="incidencia")
-     */
-    public function incidencia()
-    {
-        return $this->render('incidencia/index.html.twig');
-    }
 
     /**
      * @Route("/render-header", name="renderHeader")
@@ -54,7 +47,7 @@ class HomeController extends AbstractController
     public function renderHeader()
     {
         $arrayMenu = array(
-            'empleados', 'vehiculos', 'mantenimiento', 'incidencia',
+            'empleados', 'vehiculos', 'mantenimiento', 'incidencias',
         );
 
         return $this->render('menuheader.html.twig', [

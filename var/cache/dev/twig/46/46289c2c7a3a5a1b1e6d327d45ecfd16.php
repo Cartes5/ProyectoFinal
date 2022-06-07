@@ -63,7 +63,7 @@ class __TwigTemplate_62d924b705640def5d5047e304428203 extends Template
       <a href=\"/empleados\"><li>EMPLEADOS</li></a>
       <a href=\"/coches\"><li>VEHICULOS</li></a>
       <a href=\"/control\"><li>MANTENIMIENTO</li></a>
-      <a href=\"/incidencia\"><li>INCIDENCIA</li></a>
+      <a href=\"/incidencias\"><li>INCIDENCIAS</li></a>
     </ul>
     
     
@@ -114,7 +114,7 @@ class __TwigTemplate_62d924b705640def5d5047e304428203 extends Template
       <a href=\"/empleados\"><li>EMPLEADOS</li></a>
       <a href=\"/coches\"><li>VEHICULOS</li></a>
       <a href=\"/control\"><li>MANTENIMIENTO</li></a>
-      <a href=\"/incidencia\"><li>INCIDENCIA</li></a>
+      <a href=\"/incidencias\"><li>INCIDENCIAS</li></a>
     </ul>
     
     

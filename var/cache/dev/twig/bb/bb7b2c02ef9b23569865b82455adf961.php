@@ -155,7 +155,7 @@ class __TwigTemplate_02574f754b4927546d495e91eb824677 extends Template
                 ";
         // line 33
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["incidencia"]) || array_key_exists("incidencia", $context) ? $context["incidencia"] : (function () { throw new RuntimeError('Variable "incidencia" does not exist.', 33, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["incidencias"]) || array_key_exists("incidencias", $context) ? $context["incidencias"] : (function () { throw new RuntimeError('Variable "incidencias" does not exist.', 33, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["incidencium"]) {
             // line 34
@@ -280,7 +280,7 @@ class __TwigTemplate_02574f754b4927546d495e91eb824677 extends Template
                     </tr>
                 </thead>
                 <tbody>
-                {% for incidencium in incidencia %}
+                {% for incidencium in incidencias %}
                     <tr>
                         <td>{{ incidencium.id }}</td>
                         <td>{{ incidencium.Nombre }}</td>

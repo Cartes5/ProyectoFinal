@@ -126,21 +126,9 @@ class __TwigTemplate_6ff34d156072685395e5b391c193e947 extends Template
         echo twig_include($this->env, $context, "empleados/_form.html.twig");
         echo "
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
         <button id=\"empleado-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
             <a href=\"";
-        // line 34
+        // line 22
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_empleados_index");
         echo "\">Volver Lista</a>
         </button>
@@ -168,7 +156,7 @@ class __TwigTemplate_6ff34d156072685395e5b391c193e947 extends Template
 
     public function getDebugInfo()
     {
-        return array (  144 => 34,  126 => 19,  119 => 14,  109 => 13,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  132 => 22,  126 => 19,  119 => 14,  109 => 13,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -193,18 +181,6 @@ class __TwigTemplate_6ff34d156072685395e5b391c193e947 extends Template
     <form class=\"empleado-form\" action=\"submit\">
         {{ include('empleados/_form.html.twig') }}
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
         <button id=\"empleado-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
             <a href=\"{{ path('app_empleados_index') }}\">Volver Lista</a>
         </button>
