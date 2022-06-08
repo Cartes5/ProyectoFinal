@@ -4,25 +4,26 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('control') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
 {% endblock %}
 
 {% block body %}
-<div class="mantenimiento-container">
-  <div id="mantenimiento-checkout1">
+<div class="style-container">
+  <div id="style-checkout1">
     <h1>Crear Nuevo Registro</h1>
 
-    <form class="mantenimiento-form" action="submit">
-        {{ include('control/_form.html.twig') }}
-        <br>
-        <br>
-        
-        <button id="mantenimiento-button" class="btn btn-block btn-success submit-button" type="submit">
+    <form class="style-form" action="submit">
+        <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
          <a href="{{ path('app_control_index') }}">Volver Lista</a>
         </button>
+        <img class="imagen" src="{{ asset('images/taller.jpg') }}" alt="trabajador">
+       <br>
+       <br>
+        {{ include('control/_form.html.twig') }}
+
     </form>
   </div>
 </div>

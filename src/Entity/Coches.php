@@ -31,6 +31,9 @@ class Coches
     #[ORM\Column(type: 'date')]
     private $Fecha_Matriculacion;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $Matricula;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +107,18 @@ class Coches
     public function setFechaMatriculacion(\DateTimeInterface $Fecha_Matriculacion): self
     {
         $this->Fecha_Matriculacion = $Fecha_Matriculacion;
+
+        return $this;
+    }
+
+    public function getMatricula(): ?string
+    {
+        return $this->Matricula;
+    }
+
+    public function setMatricula(string $Matricula): self
+    {
+        $this->Matricula = $Matricula;
 
         return $this;
     }

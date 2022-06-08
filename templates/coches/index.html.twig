@@ -4,7 +4,7 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('coches') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
 
     </style>
@@ -15,11 +15,11 @@
 {% endblock %}
 
 {% block body %}
-<div class="vehiculos-container">
-  <div id="vehiculos-checkout">
+<div class="style-container">
+  <div id="style-checkout1">
     <h1>Vehiculos</h1>
 
-    <form class="vehiculos-form" action="submit">
+    <form class="style-form" action="submit">
         <table class="table">
             <thead>
                 <tr>
@@ -45,10 +45,10 @@
                     <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
                     <td>
 
-                    <button id="vehiculos-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                    <button id="style-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
                         <a href="{{ path('app_coches_show', {'id': coch.id}) }}">Mostrar</a>
                     </button>
-                    <button id="vehiculos-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                    <button id="style-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
                         <a href="{{ path('app_coches_edit', {'id': coch.id}) }}">Editar</a>
                     </button>
                     </td>
@@ -60,7 +60,7 @@
             {% endfor %}
             </tbody>
         </table>
-        <button id="vehiculos-button" class="btn btn-block btn-success submit-button" type="submit">
+        <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
             <a href="{{ path('app_coches_new') }}">Crear Nuevo</a>
         </button>
     </form>

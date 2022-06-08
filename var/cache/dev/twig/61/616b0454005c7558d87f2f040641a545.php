@@ -46,15 +46,12 @@ class __TwigTemplate_415705d6f0bd2106a6b06e43eec7a511 extends Template
         // line 2
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'widget');
         echo "
-    <button id=\"mantenimiento-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">";
-        // line 3
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 3, $this->source); })()), "Guardar")) : ("Guardar")), "html", null, true);
-        echo "</button>
     <br>
-    <img class=\"imagentaller\" src=\"";
+    <br>
+    <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">";
         // line 5
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/taller.jpg"), "html", null, true);
-        echo "\" alt=\"Symfony!\" />
+        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 5, $this->source); })()), "Guardar")) : ("Guardar")), "html", null, true);
+        echo "</button>
 ";
         // line 6
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), 'form_end');
@@ -78,16 +75,16 @@ class __TwigTemplate_415705d6f0bd2106a6b06e43eec7a511 extends Template
 
     public function getDebugInfo()
     {
-        return array (  60 => 6,  56 => 5,  51 => 3,  47 => 2,  43 => 1,);
+        return array (  57 => 6,  53 => 5,  47 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{{ form_start(form) }}
     {{ form_widget(form) }}
-    <button id=\"mantenimiento-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">{{ button_label|default('Guardar') }}</button>
     <br>
-    <img class=\"imagentaller\" src=\"{{ asset('images/taller.jpg') }}\" alt=\"Symfony!\" />
+    <br>
+    <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">{{ button_label|default('Guardar') }}</button>
 {{ form_end(form) }}", "control/_form.html.twig", "/var/www/html/ProyectoFinal/templates/control/_form.html.twig");
     }
 }

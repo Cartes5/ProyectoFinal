@@ -4,26 +4,27 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('incidencia') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
 
     </style>
 {% endblock %}
 
 {% block body %}
-<div class="incidencia-container">
-  <div id="incidencia-checkout">
+<div class="style-container">
+  <div id="style-checkout1">
         <h1>Crear Nueva Incidencia</h1>
 
-        <form class="incidencia-form" action="submit">
-
-            {{ include('incidencias/_form.html.twig') }}
-
-            <button id="incidencia-button" class="btn btn-block btn-success submit-button" type="submit">
+        <form class="style-form" action="submit">
+            <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
                 <a href="{{ path('app_incidencias_index') }}">Volver Lista</a>
             </button>
-
-            
+            <img class="imagen" src="{{ asset('images/incidencia1.jpg') }}" alt="incidencia">
+            <br>
+            <br>
+            <br>
+            <br>
+            {{ include('incidencias/_form.html.twig') }}   
         </form>
     </div>
     

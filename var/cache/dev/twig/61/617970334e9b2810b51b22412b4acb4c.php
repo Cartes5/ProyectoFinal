@@ -92,7 +92,7 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
         echo "
     ";
         // line 7
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("empleados");
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("style");
         echo "
     <style>
     
@@ -116,11 +116,6 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 14
-        echo "    ";
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
-        echo "
-";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -129,7 +124,7 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
 
     }
 
-    // line 17
+    // line 15
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -139,13 +134,12 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 18
-        echo "<div class=\"empleado-container\">
-    <div id=\"empleado-checkout\">
+        // line 16
+        echo "<div class=\"style-container\">
+    <div id=\"style-checkout1\">
         <h1>Empleados</h1>
 
-        <form class=\"empleado-form\" action=\"submit\">
-
+        <form class=\"style-form\" action=\"submit\">
             <table class=\"table\">
                 <thead>
                     <tr>
@@ -164,76 +158,73 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
                 </thead>
                 <tbody>
                 ";
-        // line 41
+        // line 38
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["empleados"]) || array_key_exists("empleados", $context) ? $context["empleados"] : (function () { throw new RuntimeError('Variable "empleados" does not exist.', 41, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["empleados"]) || array_key_exists("empleados", $context) ? $context["empleados"] : (function () { throw new RuntimeError('Variable "empleados" does not exist.', 38, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["empleado"]) {
-            // line 42
+            // line 39
             echo "                    <tr>
                         <td>";
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "id", [], "any", false, false, false, 40), "html", null, true);
+            echo "</td>
+                        <td>";
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Nombre", [], "any", false, false, false, 41), "html", null, true);
+            echo "</td>
+                        <td>";
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Apellidos", [], "any", false, false, false, 42), "html", null, true);
+            echo "</td>
+                        <td>";
             // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "id", [], "any", false, false, false, 43), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Email", [], "any", false, false, false, 43), "html", null, true);
             echo "</td>
                         <td>";
             // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Nombre", [], "any", false, false, false, 44), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Telefono", [], "any", false, false, false, 44), "html", null, true);
             echo "</td>
                         <td>";
             // line 45
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Apellidos", [], "any", false, false, false, 45), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Direccion", [], "any", false, false, false, 45), "html", null, true);
             echo "</td>
                         <td>";
             // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Email", [], "any", false, false, false, 46), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "CodigoPostal", [], "any", false, false, false, 46), "html", null, true);
             echo "</td>
                         <td>";
             // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Telefono", [], "any", false, false, false, 47), "html", null, true);
+            ((twig_get_attribute($this->env, $this->source, $context["empleado"], "FechaNacimiento", [], "any", false, false, false, 47)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "FechaNacimiento", [], "any", false, false, false, 47), "Y-m-d"), "html", null, true))) : (print ("")));
             echo "</td>
                         <td>";
             // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Direccion", [], "any", false, false, false, 48), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "NIF", [], "any", false, false, false, 48), "html", null, true);
             echo "</td>
                         <td>";
             // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "CodigoPostal", [], "any", false, false, false, 49), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Localidad", [], "any", false, false, false, 49), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 50
-            ((twig_get_attribute($this->env, $this->source, $context["empleado"], "FechaNacimiento", [], "any", false, false, false, 50)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "FechaNacimiento", [], "any", false, false, false, 50), "Y-m-d"), "html", null, true))) : (print ("")));
-            echo "</td>
-                        <td>";
-            // line 51
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "NIF", [], "any", false, false, false, 51), "html", null, true);
-            echo "</td>
-                        <td>";
-            // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["empleado"], "Localidad", [], "any", false, false, false, 52), "html", null, true);
-            echo "</td>
-                        <td>
-
-                        <button id=\"empleado-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                        <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                             <a href=\"";
-            // line 56
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_empleados_show", ["id" => twig_get_attribute($this->env, $this->source, $context["empleado"], "id", [], "any", false, false, false, 56)]), "html", null, true);
+            // line 51
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_empleados_show", ["id" => twig_get_attribute($this->env, $this->source, $context["empleado"], "id", [], "any", false, false, false, 51)]), "html", null, true);
             echo "\">Mostrar</a>
                         </button>
 
-                        <button id=\"empleado-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                        <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                             <a href=\"";
-            // line 60
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_empleados_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["empleado"], "id", [], "any", false, false, false, 60)]), "html", null, true);
+            // line 55
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_empleados_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["empleado"], "id", [], "any", false, false, false, 55)]), "html", null, true);
             echo "\">Editar</a>
                         </button>
-
-                        </td>
+                    
                     </tr>
                 ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 66
+            // line 60
             echo "                    <tr>
                         <td colspan=\"11\">No se encontraron resultados</td>
                     </tr>
@@ -242,12 +233,12 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['empleado'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 70
+        // line 64
         echo "                </tbody>
             </table>
-            <button id=\"empleado-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"";
-        // line 73
+        // line 67
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_empleados_new");
         echo "\">Crear Nuevo</a>
             </button>
@@ -278,7 +269,7 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
 
     public function getDebugInfo()
     {
-        return array (  251 => 73,  246 => 70,  237 => 66,  226 => 60,  219 => 56,  212 => 52,  208 => 51,  204 => 50,  200 => 49,  196 => 48,  192 => 47,  188 => 46,  184 => 45,  180 => 44,  176 => 43,  173 => 42,  168 => 41,  143 => 18,  133 => 17,  120 => 14,  110 => 13,  95 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  242 => 67,  237 => 64,  228 => 60,  218 => 55,  211 => 51,  206 => 49,  202 => 48,  198 => 47,  194 => 46,  190 => 45,  186 => 44,  182 => 43,  178 => 42,  174 => 41,  170 => 40,  167 => 39,  162 => 38,  138 => 16,  128 => 15,  110 => 13,  95 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -289,23 +280,20 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('empleados') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
 {% endblock %}
 
-{% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
-{% endblock %}
+{% block javascripts %}{% endblock %}
 
 {% block body %}
-<div class=\"empleado-container\">
-    <div id=\"empleado-checkout\">
+<div class=\"style-container\">
+    <div id=\"style-checkout1\">
         <h1>Empleados</h1>
 
-        <form class=\"empleado-form\" action=\"submit\">
-
+        <form class=\"style-form\" action=\"submit\">
             <table class=\"table\">
                 <thead>
                     <tr>
@@ -335,17 +323,14 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
                         <td>{{ empleado.FechaNacimiento ? empleado.FechaNacimiento|date('Y-m-d') : '' }}</td>
                         <td>{{ empleado.NIF }}</td>
                         <td>{{ empleado.Localidad }}</td>
-                        <td>
-
-                        <button id=\"empleado-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                        <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                             <a href=\"{{ path('app_empleados_show', {'id': empleado.id}) }}\">Mostrar</a>
                         </button>
 
-                        <button id=\"empleado-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                        <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                             <a href=\"{{ path('app_empleados_edit', {'id': empleado.id}) }}\">Editar</a>
                         </button>
-
-                        </td>
+                    
                     </tr>
                 {% else %}
                     <tr>
@@ -354,7 +339,7 @@ class __TwigTemplate_019dbcd6ec5b2741687a82bd51f9b2bf extends Template
                 {% endfor %}
                 </tbody>
             </table>
-            <button id=\"empleado-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"{{ path('app_empleados_new') }}\">Crear Nuevo</a>
             </button>
         </form>

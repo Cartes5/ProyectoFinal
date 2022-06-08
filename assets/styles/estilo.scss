@@ -1,0 +1,175 @@
+.estilo-container {
+    margin-top: 50px;
+    margin: 20px auto;
+  }
+  
+  #estilo-checkout {
+    z-index: 100001;
+    width: 1700px;
+    height: 100%;
+    background: 0 0 #ffffff;
+    border-radius: 8px;
+    border: 1px solid #dedede;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  #estilo-checkout>h1 {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background: #EEF2F4;
+    color: tomato;
+    font-size: 24px;
+    font-weight: 300;
+    border-bottom: 1px solid #DEDEDE;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  #estilo-checkout1 {
+    z-index: 100001;
+    width: 1100px;
+    height: 100%;
+    background: 0 0 #ffffff;
+    border-radius: 8px;
+    border: 1px solid #dedede;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  #estilo-checkout1>h1 {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background: #EEF2F4;
+    color: tomato;
+    font-size: 24px;
+    font-weight: 300;
+    border-bottom: 1px solid #DEDEDE;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .estilo-form {
+    padding: 1.4em;
+    height:900px;
+    margin: 0 275px 275px;
+    width: max-content;
+  }
+  
+  .estilo-form label {
+    color: #51BFA5;
+    margin-bottom: 2px;
+    display:block;
+    font-size: 17px;
+  }
+  
+  .estilo-form input {
+    box-shadow: none!important;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.25em;
+    padding-left: 5px;
+  }
+  
+  .estilo-form input:focus {
+    border-color: #b0e5e3!important;
+    background-color: #EEF9F9!important;
+  }
+  
+  #estilo-button {
+    outline: 0!important;
+    display:block;
+    margin:auto;
+    margin-top: 20px;
+    height: 42px;
+    width: 150px;
+    font-size: 16px;
+    background-color: #51BFA5!important;
+    color: black;
+    border: none;
+  }
+  
+  #estilo-button:hover {
+    background-color: tomato!important;
+  }
+  
+  #estilo-button:active {
+    background-color: #4FBCB9!important;
+  }
+  
+  #estilo-button:disabled {
+    background: rgba(84, 199, 195, .5)!important;
+    color: #FFF!important;
+  }
+
+  #estilo-buttonindex {
+    outline: 0!important;
+    display:block;
+    margin:auto;
+    margin-top: 20px;
+    height: 42px;
+    width: 80px;
+    font-size: 16px;
+    background-color: #51BFA5!important;
+    color: black;
+    border: none;
+  }
+  
+  #estilo-buttonindex:hover {
+    background-color: tomato!important;
+  }
+  
+  #estilo-buttonindex:active {
+    background-color: #4FBCB9!important;
+  }
+  
+  #estilo-buttonindex:disabled {
+    background: rgba(84, 199, 195, .5)!important;
+    color: #FFF!important;
+  }
+
+  .imagentrabajador {
+   border-radius: 50px;
+   width: 450px;
+   height: 350px; 
+   display:block;
+   margin:auto;
+  }
+
+  a:link {
+    text-decoration: none 
+  }
+
+  a:hover { 
+    color: black;
+    text-decoration: none 
+  }
+
+  a:visited {
+    color: black;
+    text-decoration: none 
+  }
+  
+  /*****MEDIA QUERYS******/
+  @media screen and (max-width: 680px) {
+    #estilo-checkout {
+      width: 95%;
+    }
+    .estilo-form {
+      margin: 0;
+    }
+    .table{
+      width: 50%;
+    }
+  }
+  
+  @media screen and (min-width: 681px) and (max-width: 1200px) {
+    #estilo-checkout {
+      width: 600px;
+    }
+  }
+

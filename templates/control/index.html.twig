@@ -4,19 +4,20 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('control') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
 
     </style>
 {% endblock %}
 
+{% block javascripts %}{% endblock %}
+
 {% block body %}
-<div class="mantenimiento-container">
-    <div id="mantenimiento-checkout">
+<div class="style-container">
+    <div id="style-checkout1">
         <h1>Mantenimiento</h1>
 
-        <form class="mantenimiento-form" action="submit">
-
+        <form class="style-form" action="submit">
             <table class="table">
                 <thead>
                     <tr>
@@ -25,7 +26,7 @@
                         <th>Numero_Factura</th>
                         <th>Precio_Factura</th>
                         <th>Multas</th>
-                        <th>Numero_Facturas</th>
+                        <th>Numero_Multas</th>
                         <th>Cantidad_Multas</th>
                         <th>Equipamiento</th>
                         <th>actions</th>
@@ -39,15 +40,15 @@
                         <td>{{ control.NumeroFactura }}</td>
                         <td>{{ control.PrecioFactura }}</td>
                         <td>{{ control.Multas }}</td>
-                        <td>{{ control.NumeroFacturas }}</td>
+                        <td>{{ control.NumeroMultas }}</td>
                         <td>{{ control.CantidadMultas }}</td>
                         <td>{{ control.Equipamiento }}</td>
                         <td>
 
-                        <button id="mantenimiento-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                        <button id="style-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
                             <a href="{{ path('app_control_show', {'id': control.id}) }}">Mostrar</a>
                         </button>
-                        <button id="mantenimiento-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                        <button id="style-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
                             <a href="{{ path('app_control_edit', {'id': control.id}) }}">Editar</a>
                         </button>
                         </td>
@@ -60,7 +61,7 @@
                 </tbody>
             </table>
 
-            <button id="mantenimiento-button" class="btn btn-block btn-success submit-button" type="submit">
+            <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
                 <a href="{{ path('app_control_new') }}">Crear Nuevo</a>
             </button>
         </form>

@@ -3,7 +3,7 @@
 {% block title %}Editar Incidencia{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('incidencia') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
 
     </style>
@@ -12,18 +12,18 @@
 {% block javascripts %}{% endblock %}
 
 {% block body %}
-<div class="incidencia-container">
-    <div id="incidencia-checkout1">
+<div class="style-container">
+    <div id="style-checkout1">
         <h1>Editar Incidencia</h1>
 
-        <form class="incidencia-form" action="submit">  
-            {{ include('incidencias/_form.html.twig', {'button_label': 'Actualizar'}) }}
-
-            <button id="incidencia-button" class="btn btn-block btn-success submit-button" type="submit">
+        {{ include('incidencias/_delete_form.html.twig') }}
+        <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
                <a href="{{ path('app_incidencias_index') }}">Volver Lista</a>
             </button>
+        <form class="style-form" action="submit"> 
+             <img class="imagen" src="{{ asset('images/incidencia1.jpg') }}" alt="incidencia"> 
+            {{ include('incidencias/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
-            {{ include('incidencias/_delete_form.html.twig') }}
         </form>
     </div> 
 </div>

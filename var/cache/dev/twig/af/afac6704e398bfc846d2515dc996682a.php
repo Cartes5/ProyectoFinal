@@ -91,7 +91,7 @@ class __TwigTemplate_abb5b80e1295f7a24450edb8aeaf8c2c extends Template
         echo "
     ";
         // line 7
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("incidencia");
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("style");
         echo "
     <style>
 
@@ -116,25 +116,29 @@ class __TwigTemplate_abb5b80e1295f7a24450edb8aeaf8c2c extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 14
-        echo "<div class=\"incidencia-container\">
-  <div id=\"incidencia-checkout\">
+        echo "<div class=\"style-container\">
+  <div id=\"style-checkout1\">
         <h1>Crear Nueva Incidencia</h1>
 
-        <form class=\"incidencia-form\" action=\"submit\">
-
-            ";
-        // line 20
-        echo twig_include($this->env, $context, "incidencias/_form.html.twig");
-        echo "
-
-            <button id=\"incidencia-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+        <form class=\"style-form\" action=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"";
-        // line 23
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_incidencias_index");
         echo "\">Volver Lista</a>
             </button>
-
-            
+            <img class=\"imagen\" src=\"";
+        // line 22
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/incidencia1.jpg"), "html", null, true);
+        echo "\" alt=\"incidencia\">
+            <br>
+            <br>
+            <br>
+            <br>
+            ";
+        // line 27
+        echo twig_include($this->env, $context, "incidencias/_form.html.twig");
+        echo "   
         </form>
     </div>
     
@@ -160,7 +164,7 @@ class __TwigTemplate_abb5b80e1295f7a24450edb8aeaf8c2c extends Template
 
     public function getDebugInfo()
     {
-        return array (  133 => 23,  127 => 20,  119 => 14,  109 => 13,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  140 => 27,  132 => 22,  127 => 20,  119 => 14,  109 => 13,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -171,26 +175,27 @@ class __TwigTemplate_abb5b80e1295f7a24450edb8aeaf8c2c extends Template
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('incidencia') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
 
     </style>
 {% endblock %}
 
 {% block body %}
-<div class=\"incidencia-container\">
-  <div id=\"incidencia-checkout\">
+<div class=\"style-container\">
+  <div id=\"style-checkout1\">
         <h1>Crear Nueva Incidencia</h1>
 
-        <form class=\"incidencia-form\" action=\"submit\">
-
-            {{ include('incidencias/_form.html.twig') }}
-
-            <button id=\"incidencia-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+        <form class=\"style-form\" action=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"{{ path('app_incidencias_index') }}\">Volver Lista</a>
             </button>
-
-            
+            <img class=\"imagen\" src=\"{{ asset('images/incidencia1.jpg') }}\" alt=\"incidencia\">
+            <br>
+            <br>
+            <br>
+            <br>
+            {{ include('incidencias/_form.html.twig') }}   
         </form>
     </div>
     

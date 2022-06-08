@@ -4,23 +4,24 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('empleados') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
 {% endblock %}
 
 {% block body %}
-<div class="empleado-container">
-  <div id="empleado-checkout1">
+<div class="style-container">
+  <div id="style-checkout1">
     <h1>Crear Nuevos Empleados</h1>
 
-    <form class="empleado-form" action="submit">
-        {{ include('empleados/_form.html.twig') }}
-        <br>
-        <button id="empleado-button" class="btn btn-block btn-success submit-button" type="submit">
-            <a href="{{ path('app_empleados_index') }}">Volver Lista</a>
+    <form class="style-form" action="submit">
+        <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
+          <a href="{{ path('app_empleados_index') }}">Volver Lista</a>
         </button>
+            <img class="imagen" src="{{ asset('images/trabajador.jpg') }}" alt="trabajador">
+        {{ include('empleados/_form.html.twig') }}
+    
      </form>
   </div>
 </div>

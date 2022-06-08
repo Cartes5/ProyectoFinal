@@ -18,6 +18,7 @@ class CochesType extends AbstractType
             ->add('Numero_Bastidor')
             ->add('Fecha_ITV')
             ->add('Fecha_Matriculacion')
+            ->add('Matricula')
         ;
     }
 

@@ -4,22 +4,20 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('incidencia') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
 
     </style>
 {% endblock %}
 
-{% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
-{% endblock %}
+{% block javascripts %}{% endblock %}
 
 {% block body %}
-<div class="incidencia-container">
-    <div id="incidencia-checkout">
+<div class="style-container">
+    <div id="style-checkout1">
         <h1>Incidencia</h1>
     
-        <form class="incidencia-form" action="submit">
+        <form class="style-form" action="submit">
             <table class="table">
                 <thead>
                     <tr>
@@ -39,12 +37,11 @@
                         <td>{{ incidencium.Apellidos }}</td>
                         <td>{{ incidencium.Departamento }}</td>
                         <td>{{ incidencium.Descripcion }}</td>
-                        <td>
 
-                        <button id="incidencia-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                        <button id="style-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
                             <a href="{{ path('app_incidencias_show', {'id': incidencium.id}) }}">Mostrar</a>
                         </button>
-                        <button id="incidencia-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                        <button id="style-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
                             <a href="{{ path('app_incidencias_edit', {'id': incidencium.id}) }}">Editar</a>
                         </button>
                         </td>
@@ -56,7 +53,7 @@
                 {% endfor %}
                 </tbody>
             </table>
-            <button id="incidencia-button" class="btn btn-block btn-success submit-button" type="submit">
+            <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
                 <a href="{{ path('app_incidencias_new') }}">Crear Nuevo</a>
             </button>
         </form>

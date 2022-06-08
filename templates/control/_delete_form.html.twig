@@ -1,4 +1,4 @@
 <form method="post" action="{{ path('app_control_delete', {'id': control.id}) }}" onsubmit="return confirm('¿Estas seguro de borrar?');">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ control.id) }}">
-    <button id="mantenimiento-button" class="btn btn-block btn-success submit-button" type="submit">Borrar</button>
+    <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">Borrar</button>
 </form>

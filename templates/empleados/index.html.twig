@@ -4,23 +4,20 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('empleados') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
 {% endblock %}
 
-{% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
-{% endblock %}
+{% block javascripts %}{% endblock %}
 
 {% block body %}
-<div class="empleado-container">
-    <div id="empleado-checkout">
+<div class="style-container">
+    <div id="style-checkout1">
         <h1>Empleados</h1>
 
-        <form class="empleado-form" action="submit">
-
+        <form class="style-form" action="submit">
             <table class="table">
                 <thead>
                     <tr>
@@ -50,17 +47,14 @@
                         <td>{{ empleado.FechaNacimiento ? empleado.FechaNacimiento|date('Y-m-d') : '' }}</td>
                         <td>{{ empleado.NIF }}</td>
                         <td>{{ empleado.Localidad }}</td>
-                        <td>
-
-                        <button id="empleado-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                        <button id="style-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
                             <a href="{{ path('app_empleados_show', {'id': empleado.id}) }}">Mostrar</a>
                         </button>
 
-                        <button id="empleado-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                        <button id="style-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
                             <a href="{{ path('app_empleados_edit', {'id': empleado.id}) }}">Editar</a>
                         </button>
-
-                        </td>
+                    
                     </tr>
                 {% else %}
                     <tr>
@@ -69,7 +63,7 @@
                 {% endfor %}
                 </tbody>
             </table>
-            <button id="empleado-button" class="btn btn-block btn-success submit-button" type="submit">
+            <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
                 <a href="{{ path('app_empleados_new') }}">Crear Nuevo</a>
             </button>
         </form>

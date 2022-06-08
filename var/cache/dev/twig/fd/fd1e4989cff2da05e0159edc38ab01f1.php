@@ -91,7 +91,7 @@ class __TwigTemplate_c8595a4f15d7065340538a5fc79b3b44 extends Template
         echo "
     ";
         // line 7
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("coches");
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("style");
         echo "
     <style>
     
@@ -116,26 +116,27 @@ class __TwigTemplate_c8595a4f15d7065340538a5fc79b3b44 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 14
-        echo "<div class=\"vehiculos-container\">
-  <div id=\"vehiculos-checkout1\">
+        echo "<div class=\"style-container\">
+  <div id=\"style-checkout1\">
     <h1>Crear Nuevos Vehiculos</h1>
 
-    <form class=\"vehiculos-form\" action=\"submit\">
-        ";
-        // line 19
-        echo twig_include($this->env, $context, "coches/_form.html.twig");
-        echo "
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <button id=\"vehiculos-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+    <form class=\"style-form\" action=\"submit\">
+        <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
             <a href=\"";
-        // line 26
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_index");
         echo "\">Volver Lista</a>
         </button>
+        <img class=\"imagen\" src=\"";
+        // line 22
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/vehiculo.jpg"), "html", null, true);
+        echo "\" alt=\"trabajador\">
+        <br>
+        <br>
+        ";
+        // line 25
+        echo twig_include($this->env, $context, "coches/_form.html.twig");
+        echo "
     </form>
   </div>
 </div>
@@ -160,7 +161,7 @@ class __TwigTemplate_c8595a4f15d7065340538a5fc79b3b44 extends Template
 
     public function getDebugInfo()
     {
-        return array (  136 => 26,  126 => 19,  119 => 14,  109 => 13,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  138 => 25,  132 => 22,  127 => 20,  119 => 14,  109 => 13,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -171,27 +172,25 @@ class __TwigTemplate_c8595a4f15d7065340538a5fc79b3b44 extends Template
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('coches') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
 {% endblock %}
 
 {% block body %}
-<div class=\"vehiculos-container\">
-  <div id=\"vehiculos-checkout1\">
+<div class=\"style-container\">
+  <div id=\"style-checkout1\">
     <h1>Crear Nuevos Vehiculos</h1>
 
-    <form class=\"vehiculos-form\" action=\"submit\">
-        {{ include('coches/_form.html.twig') }}
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <button id=\"vehiculos-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+    <form class=\"style-form\" action=\"submit\">
+        <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
             <a href=\"{{ path('app_coches_index') }}\">Volver Lista</a>
         </button>
+        <img class=\"imagen\" src=\"{{ asset('images/vehiculo.jpg') }}\" alt=\"trabajador\">
+        <br>
+        <br>
+        {{ include('coches/_form.html.twig') }}
     </form>
   </div>
 </div>

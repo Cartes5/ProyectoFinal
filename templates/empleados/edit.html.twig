@@ -3,37 +3,29 @@
 {% block title %}Editar Empleados{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('empleados') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
 {% endblock %}
 
 {% block body %}
-<div class="empleado-container">
-  <div id="empleado-checkout1">
+<div class="style-container">
+  <div id="style-checkout1">
     <h1>Editar Empleados</h1>
-    
-    <form class="empleado-form" action="submit">
 
-    {{ include('empleados/_form.html.twig', {'button_label': 'Actualizar'}) }}
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    {{ include('empleados/_delete_form.html.twig') }}
-
-
-        <button id="empleado-button" class="btn btn-block btn-success submit-button" type="submit">
+        {{ include('empleados/_delete_form.html.twig') }}
+        <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
             <a href="{{ path('app_empleados_index') }}">Volver Lista</a>
         </button>
+    <form class="style-form" action="submit">
+    <img class="imagen" src="{{ asset('build/images/trabajador.jpg') }}" alt="trabajador">
+    {{ include('empleados/_form.html.twig', {'button_label': 'Actualizar'}) }}
+
+
+
+
+        
 
     
     </form>

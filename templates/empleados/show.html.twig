@@ -3,7 +3,7 @@
 {% block title %}Empleados{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('empleados') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
@@ -12,11 +12,11 @@
 {% block javascripts %}{% endblock %}
 
 {% block body %}
-<div class="empleado-container">
-  <div id="empleado-checkout1">
+<div class="style-container">
+  <div id="style-checkout1">
     <h1>Empleados</h1>
 
-    <form class="empleado-form" action="submit">
+    <form class="style-form" action="submit">
 
             <table class="table">
                 <tbody>
@@ -63,11 +63,11 @@
                 </tbody>
             </table>
 
-            <button id="empleado-button" class="btn btn-block btn-success submit-button" type="submit">
+            <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
                 <a href="{{ path('app_empleados_index') }}">Volver Lista</a>
             </button>
 
-            <button id="empleado-button" class="btn btn-block btn-success submit-button" type="submit">
+            <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
                 <a href="{{ path('app_empleados_edit', {'id': empleado.id}) }}">Editar</a>
             </button>
             {{ include('empleados/_delete_form.html.twig') }}

@@ -4,27 +4,25 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('coches') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
 {% endblock %}
 
 {% block body %}
-<div class="vehiculos-container">
-  <div id="vehiculos-checkout1">
+<div class="style-container">
+  <div id="style-checkout1">
     <h1>Crear Nuevos Vehiculos</h1>
 
-    <form class="vehiculos-form" action="submit">
-        {{ include('coches/_form.html.twig') }}
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <button id="vehiculos-button" class="btn btn-block btn-success submit-button" type="submit">
+    <form class="style-form" action="submit">
+        <button id="style-button" class="btn btn-block btn-success submit-button" type="submit">
             <a href="{{ path('app_coches_index') }}">Volver Lista</a>
         </button>
+        <img class="imagen" src="{{ asset('images/vehiculo.jpg') }}" alt="trabajador">
+        <br>
+        <br>
+        {{ include('coches/_form.html.twig') }}
     </form>
   </div>
 </div>

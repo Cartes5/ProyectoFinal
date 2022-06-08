@@ -92,7 +92,7 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
         echo "
     ";
         // line 7
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("incidencia");
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("style");
         echo "
     <style>
 
@@ -116,11 +116,6 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 14
-        echo "    ";
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
-        echo "
-";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -129,7 +124,7 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
 
     }
 
-    // line 17
+    // line 15
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -139,12 +134,12 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 18
-        echo "<div class=\"incidencia-container\">
-    <div id=\"incidencia-checkout\">
+        // line 16
+        echo "<div class=\"style-container\">
+    <div id=\"style-checkout1\">
         <h1>Incidencia</h1>
     
-        <form class=\"incidencia-form\" action=\"submit\">
+        <form class=\"style-form\" action=\"submit\">
             <table class=\"table\">
                 <thead>
                     <tr>
@@ -158,45 +153,44 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
                 </thead>
                 <tbody>
                 ";
-        // line 35
+        // line 33
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["incidencias"]) || array_key_exists("incidencias", $context) ? $context["incidencias"] : (function () { throw new RuntimeError('Variable "incidencias" does not exist.', 35, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["incidencias"]) || array_key_exists("incidencias", $context) ? $context["incidencias"] : (function () { throw new RuntimeError('Variable "incidencias" does not exist.', 33, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["incidencium"]) {
-            // line 36
+            // line 34
             echo "                    <tr>
                         <td>";
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "id", [], "any", false, false, false, 35), "html", null, true);
+            echo "</td>
+                        <td>";
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "Nombre", [], "any", false, false, false, 36), "html", null, true);
+            echo "</td>
+                        <td>";
             // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "id", [], "any", false, false, false, 37), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "Apellidos", [], "any", false, false, false, 37), "html", null, true);
             echo "</td>
                         <td>";
             // line 38
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "Nombre", [], "any", false, false, false, 38), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "Departamento", [], "any", false, false, false, 38), "html", null, true);
             echo "</td>
                         <td>";
             // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "Apellidos", [], "any", false, false, false, 39), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "Descripcion", [], "any", false, false, false, 39), "html", null, true);
             echo "</td>
-                        <td>";
-            // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "Departamento", [], "any", false, false, false, 40), "html", null, true);
-            echo "</td>
-                        <td>";
-            // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["incidencium"], "Descripcion", [], "any", false, false, false, 41), "html", null, true);
-            echo "</td>
-                        <td>
 
-                        <button id=\"incidencia-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                        <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                             <a href=\"";
-            // line 45
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_incidencias_show", ["id" => twig_get_attribute($this->env, $this->source, $context["incidencium"], "id", [], "any", false, false, false, 45)]), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_incidencias_show", ["id" => twig_get_attribute($this->env, $this->source, $context["incidencium"], "id", [], "any", false, false, false, 42)]), "html", null, true);
             echo "\">Mostrar</a>
                         </button>
-                        <button id=\"incidencia-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                        <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                             <a href=\"";
-            // line 48
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_incidencias_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["incidencium"], "id", [], "any", false, false, false, 48)]), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_incidencias_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["incidencium"], "id", [], "any", false, false, false, 45)]), "html", null, true);
             echo "\">Editar</a>
                         </button>
                         </td>
@@ -205,7 +199,7 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 53
+            // line 50
             echo "                    <tr>
                         <td colspan=\"6\">No se encontraron resultados</td>
                     </tr>
@@ -214,12 +208,12 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['incidencium'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 57
+        // line 54
         echo "                </tbody>
             </table>
-            <button id=\"incidencia-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"";
-        // line 60
+        // line 57
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_incidencias_new");
         echo "\">Crear Nuevo</a>
             </button>
@@ -248,7 +242,7 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
 
     public function getDebugInfo()
     {
-        return array (  223 => 60,  218 => 57,  209 => 53,  199 => 48,  193 => 45,  186 => 41,  182 => 40,  178 => 39,  174 => 38,  170 => 37,  167 => 36,  162 => 35,  143 => 18,  133 => 17,  120 => 14,  110 => 13,  95 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  217 => 57,  212 => 54,  203 => 50,  193 => 45,  187 => 42,  181 => 39,  177 => 38,  173 => 37,  169 => 36,  165 => 35,  162 => 34,  157 => 33,  138 => 16,  128 => 15,  110 => 13,  95 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -259,22 +253,20 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('incidencia') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
 
     </style>
 {% endblock %}
 
-{% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
-{% endblock %}
+{% block javascripts %}{% endblock %}
 
 {% block body %}
-<div class=\"incidencia-container\">
-    <div id=\"incidencia-checkout\">
+<div class=\"style-container\">
+    <div id=\"style-checkout1\">
         <h1>Incidencia</h1>
     
-        <form class=\"incidencia-form\" action=\"submit\">
+        <form class=\"style-form\" action=\"submit\">
             <table class=\"table\">
                 <thead>
                     <tr>
@@ -294,12 +286,11 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
                         <td>{{ incidencium.Apellidos }}</td>
                         <td>{{ incidencium.Departamento }}</td>
                         <td>{{ incidencium.Descripcion }}</td>
-                        <td>
 
-                        <button id=\"incidencia-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                        <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                             <a href=\"{{ path('app_incidencias_show', {'id': incidencium.id}) }}\">Mostrar</a>
                         </button>
-                        <button id=\"incidencia-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                        <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                             <a href=\"{{ path('app_incidencias_edit', {'id': incidencium.id}) }}\">Editar</a>
                         </button>
                         </td>
@@ -311,7 +302,7 @@ class __TwigTemplate_91124d1f8eab00b7ab33dd99c7e94c70 extends Template
                 {% endfor %}
                 </tbody>
             </table>
-            <button id=\"incidencia-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"{{ path('app_incidencias_new') }}\">Crear Nuevo</a>
             </button>
         </form>

@@ -46,18 +46,13 @@ class __TwigTemplate_9b8482a3cd08d9719146a62bef1f6396 extends Template
         // line 2
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'widget');
         echo "
-    <button id=\"empleado-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">";
+    <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">";
         // line 3
         echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 3, $this->source); })()), "Guardar")) : ("Guardar")), "html", null, true);
         echo "</button>
-    <br>
-    <img class=\"imagentrabajador\" src=\"";
-        // line 5
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trabajador.jpg"), "html", null, true);
-        echo "\" alt=\"Symfony!\" />
 ";
-        // line 6
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), 'form_end');
+        // line 4
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), 'form_end');
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -78,16 +73,14 @@ class __TwigTemplate_9b8482a3cd08d9719146a62bef1f6396 extends Template
 
     public function getDebugInfo()
     {
-        return array (  60 => 6,  56 => 5,  51 => 3,  47 => 2,  43 => 1,);
+        return array (  55 => 4,  51 => 3,  47 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{{ form_start(form) }}
     {{ form_widget(form) }}
-    <button id=\"empleado-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">{{ button_label|default('Guardar') }}</button>
-    <br>
-    <img class=\"imagentrabajador\" src=\"{{ asset('images/trabajador.jpg') }}\" alt=\"Symfony!\" />
+    <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">{{ button_label|default('Guardar') }}</button>
 {{ form_end(form) }}", "empleados/_form.html.twig", "/var/www/html/ProyectoFinal/templates/empleados/_form.html.twig");
     }
 }

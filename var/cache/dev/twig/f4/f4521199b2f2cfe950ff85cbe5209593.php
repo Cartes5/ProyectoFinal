@@ -91,7 +91,7 @@ class __TwigTemplate_6ff34d156072685395e5b391c193e947 extends Template
         echo "
     ";
         // line 7
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("empleados");
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("style");
         echo "
     <style>
     
@@ -116,22 +116,26 @@ class __TwigTemplate_6ff34d156072685395e5b391c193e947 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 14
-        echo "<div class=\"empleado-container\">
-  <div id=\"empleado-checkout1\">
+        echo "<div class=\"style-container\">
+  <div id=\"style-checkout1\">
     <h1>Crear Nuevos Empleados</h1>
 
-    <form class=\"empleado-form\" action=\"submit\">
-        ";
-        // line 19
-        echo twig_include($this->env, $context, "empleados/_form.html.twig");
-        echo "
-        <br>
-        <button id=\"empleado-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
-            <a href=\"";
-        // line 22
+    <form class=\"style-form\" action=\"submit\">
+        <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+          <a href=\"";
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_empleados_index");
         echo "\">Volver Lista</a>
         </button>
+            <img class=\"imagen\" src=\"";
+        // line 22
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/trabajador.jpg"), "html", null, true);
+        echo "\" alt=\"trabajador\">
+        ";
+        // line 23
+        echo twig_include($this->env, $context, "empleados/_form.html.twig");
+        echo "
+    
      </form>
   </div>
 </div>
@@ -156,7 +160,7 @@ class __TwigTemplate_6ff34d156072685395e5b391c193e947 extends Template
 
     public function getDebugInfo()
     {
-        return array (  132 => 22,  126 => 19,  119 => 14,  109 => 13,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  136 => 23,  132 => 22,  127 => 20,  119 => 14,  109 => 13,  94 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -167,23 +171,24 @@ class __TwigTemplate_6ff34d156072685395e5b391c193e947 extends Template
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('empleados') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
 {% endblock %}
 
 {% block body %}
-<div class=\"empleado-container\">
-  <div id=\"empleado-checkout1\">
+<div class=\"style-container\">
+  <div id=\"style-checkout1\">
     <h1>Crear Nuevos Empleados</h1>
 
-    <form class=\"empleado-form\" action=\"submit\">
-        {{ include('empleados/_form.html.twig') }}
-        <br>
-        <button id=\"empleado-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
-            <a href=\"{{ path('app_empleados_index') }}\">Volver Lista</a>
+    <form class=\"style-form\" action=\"submit\">
+        <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+          <a href=\"{{ path('app_empleados_index') }}\">Volver Lista</a>
         </button>
+            <img class=\"imagen\" src=\"{{ asset('images/trabajador.jpg') }}\" alt=\"trabajador\">
+        {{ include('empleados/_form.html.twig') }}
+    
      </form>
   </div>
 </div>

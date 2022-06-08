@@ -92,7 +92,7 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
         echo "
     ";
         // line 7
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("coches");
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("style");
         echo "
     <style>
 
@@ -138,11 +138,11 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 18
-        echo "<div class=\"vehiculos-container\">
-  <div id=\"vehiculos-checkout\">
+        echo "<div class=\"style-container\">
+  <div id=\"style-checkout1\">
     <h1>Vehiculos</h1>
 
-    <form class=\"vehiculos-form\" action=\"submit\">
+    <form class=\"style-form\" action=\"submit\">
         <table class=\"table\">
             <thead>
                 <tr>
@@ -195,13 +195,13 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
             echo "</td>
                     <td>
 
-                    <button id=\"vehiculos-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                    <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                         <a href=\"";
             // line 49
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_show", ["id" => twig_get_attribute($this->env, $this->source, $context["coch"], "id", [], "any", false, false, false, 49)]), "html", null, true);
             echo "\">Mostrar</a>
                     </button>
-                    <button id=\"vehiculos-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                    <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                         <a href=\"";
             // line 52
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["coch"], "id", [], "any", false, false, false, 52)]), "html", null, true);
@@ -225,7 +225,7 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
         // line 61
         echo "            </tbody>
         </table>
-        <button id=\"vehiculos-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+        <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
             <a href=\"";
         // line 64
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_new");
@@ -268,7 +268,7 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('coches') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
 
     </style>
@@ -279,11 +279,11 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
 {% endblock %}
 
 {% block body %}
-<div class=\"vehiculos-container\">
-  <div id=\"vehiculos-checkout\">
+<div class=\"style-container\">
+  <div id=\"style-checkout1\">
     <h1>Vehiculos</h1>
 
-    <form class=\"vehiculos-form\" action=\"submit\">
+    <form class=\"style-form\" action=\"submit\">
         <table class=\"table\">
             <thead>
                 <tr>
@@ -309,10 +309,10 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
                     <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
                     <td>
 
-                    <button id=\"vehiculos-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                    <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                         <a href=\"{{ path('app_coches_show', {'id': coch.id}) }}\">Mostrar</a>
                     </button>
-                    <button id=\"vehiculos-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+                    <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                         <a href=\"{{ path('app_coches_edit', {'id': coch.id}) }}\">Editar</a>
                     </button>
                     </td>
@@ -324,7 +324,7 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
             {% endfor %}
             </tbody>
         </table>
-        <button id=\"vehiculos-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+        <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
             <a href=\"{{ path('app_coches_new') }}\">Crear Nuevo</a>
         </button>
     </form>
