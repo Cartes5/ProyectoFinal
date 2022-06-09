@@ -41,4 +41,6 @@ return [
     'app_incidencias_show' => [['id'], ['_controller' => 'App\\Controller\\IncidenciasController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/incidencias']], [], [], []],
     'app_incidencias_edit' => [['id'], ['_controller' => 'App\\Controller\\IncidenciasController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/incidencias']], [], [], []],
     'app_incidencias_delete' => [['id'], ['_controller' => 'App\\Controller\\IncidenciasController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/incidencias']], [], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/']], [], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
 ];

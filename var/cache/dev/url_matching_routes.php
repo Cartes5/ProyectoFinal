@@ -33,6 +33,8 @@ return [
         '/render-header' => [[['_route' => 'renderHeader', '_controller' => 'App\\Controller\\HomeController::renderHeader'], null, null, null, false, false, null]],
         '/incidencias' => [[['_route' => 'app_incidencias_index', '_controller' => 'App\\Controller\\IncidenciasController::index'], null, ['GET' => 0], null, true, false, null]],
         '/incidencias/new' => [[['_route' => 'app_incidencias_new', '_controller' => 'App\\Controller\\IncidenciasController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

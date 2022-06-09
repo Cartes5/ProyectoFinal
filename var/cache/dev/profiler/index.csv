@@ -1372,3 +1372,17 @@ a249c3,127.0.0.1,GET,https://localhost:8000/empleados/new,1654715737,,200
 d27952,127.0.0.1,GET,https://localhost:8000/incidencias/,1654715741,,200
 220abb,127.0.0.1,GET,https://localhost:8000/render-header,1654715742,1b3264,200
 1b3264,127.0.0.1,GET,https://localhost:8000/incidencias/new,1654715742,,200
+d8e1bb,127.0.0.1,GET,http://localhost:8001/,1654764844,,404
+1cb6a7,::1,GET,http://localhost:8001/favicon.ico,1654764844,1924be,404
+1924be,::1,GET,http://localhost:8001/favicon.ico,1654764844,,404
+5f245e,127.0.0.1,GET,http://localhost:8000/,1654765004,,404
+e9f3aa,::1,GET,http://localhost:8000/favicon.ico,1654765004,ff75f2,404
+ff75f2,::1,GET,http://localhost:8000/favicon.ico,1654765004,,404
+d31c0d,127.0.0.1,GET,http://localhost:8000/render-header,1654765009,007d8a,200
+007d8a,127.0.0.1,GET,http://localhost:8000/home,1654765009,,200
+496278,127.0.0.1,GET,http://localhost:8000/coches/,1654765012,c44a30,500
+c44a30,127.0.0.1,GET,http://localhost:8000/coches/,1654765012,,500
+09b549,127.0.0.1,GET,http://localhost:8000/,1654765357,,200
+3fab0a,127.0.0.1,GET,http://localhost:8000/,1654765381,,200
+3968f9,127.0.0.1,GET,http://localhost:8000/,1654765529,,200
+0ca21f,127.0.0.1,GET,http://localhost:8000/,1654765563,,200

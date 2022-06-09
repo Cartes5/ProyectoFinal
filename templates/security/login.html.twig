@@ -1,0 +1,43 @@
+{% extends 'baselogin.html.twig' %}
+
+{% block title %}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('login') }}
+    <style>
+    
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="login-container">
+    <div id="login-checkout">
+        <h1>Logueate en Infocohes</h1>
+        <form class="login-form" method="post">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            {% if app.user %}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% endif %}
+
+            
+            <label for="inputEmail">Email</label>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+            <label for="inputPassword">Password</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+            <input type="hidden" name="_csrf_token"
+                value="{{ csrf_token('authenticate') }}"
+            >
+            <button id="login-buttonindex" class="btn btn-block btn-success submit-button" type="submit">
+                Validar
+            </button>
+
+        </form>
+
+
+{% endblock %}
