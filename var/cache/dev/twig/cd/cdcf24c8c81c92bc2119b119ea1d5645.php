@@ -152,7 +152,7 @@ class __TwigTemplate_b5b9ba7f9e42e0e66c99611181576f23 extends Template
         <form class=\"style-form\" action=\"submit\"> 
              <img class=\"imagen\" src=\"";
         // line 24
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/images/incidencia1.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/incidencia1.jpg"), "html", null, true);
         echo "\" alt=\"incidencia\"> 
             ";
         // line 25
@@ -211,7 +211,7 @@ class __TwigTemplate_b5b9ba7f9e42e0e66c99611181576f23 extends Template
                <a href=\"{{ path('app_incidencias_index') }}\">Volver Lista</a>
             </button>
         <form class=\"style-form\" action=\"submit\"> 
-             <img class=\"imagen\" src=\"{{ asset('build/images/incidencia1.jpg') }}\" alt=\"incidencia\"> 
+             <img class=\"imagen\" src=\"{{ asset('images/incidencia1.jpg') }}\" alt=\"incidencia\"> 
             {{ include('incidencias/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
         </form>

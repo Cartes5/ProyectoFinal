@@ -236,6 +236,6 @@ class __TwigTemplate_746b4833946bd6a6e0ee14e8db7d1643 extends Template
         </form>
 
 
-{% endblock %}", "security/login.html.twig", "/var/www/html/ProyectoFinal-1/templates/security/login.html.twig");
+{% endblock %}", "security/login.html.twig", "/var/www/html/ProyectoFinal/templates/security/login.html.twig");
     }
 }

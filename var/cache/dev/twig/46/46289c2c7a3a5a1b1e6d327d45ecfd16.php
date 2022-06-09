@@ -121,6 +121,6 @@ class __TwigTemplate_62d924b705640def5d5047e304428203 extends Template
   </div>
   
 </nav>
-</div>", "menuheader.html.twig", "/var/www/html/ProyectoFinal-1/templates/menuheader.html.twig");
+</div>", "menuheader.html.twig", "/var/www/html/ProyectoFinal/templates/menuheader.html.twig");
     }
 }

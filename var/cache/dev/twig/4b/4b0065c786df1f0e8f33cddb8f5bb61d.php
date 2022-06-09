@@ -191,24 +191,32 @@ class __TwigTemplate_2ad0efbd736d47cd443341ad18f04fcd extends Template
         ((twig_get_attribute($this->env, $this->source, (isset($context["coch"]) || array_key_exists("coch", $context) ? $context["coch"] : (function () { throw new RuntimeError('Variable "coch" does not exist.', 48, $this->source); })()), "FechaMatriculacion", [], "any", false, false, false, 48)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coch"]) || array_key_exists("coch", $context) ? $context["coch"] : (function () { throw new RuntimeError('Variable "coch" does not exist.', 48, $this->source); })()), "FechaMatriculacion", [], "any", false, false, false, 48), "Y-m-d"), "html", null, true))) : (print ("")));
         echo "</td>
                         </tr>
+                        <tr>
+                            <th>Matricula</th>
+                            <td>";
+        // line 52
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coch"]) || array_key_exists("coch", $context) ? $context["coch"] : (function () { throw new RuntimeError('Variable "coch" does not exist.', 52, $this->source); })()), "Matricula", [], "any", false, false, false, 52), "html", null, true);
+        echo "</td>
+                        </tr>
+                        
                     </tbody>
                 </table>
 
                 <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                     <a href=\"";
-        // line 54
+        // line 59
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_index");
         echo "\">Volver Lista</a>
                 </button>
 
                 <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                     <a href=\"";
-        // line 58
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["coch"]) || array_key_exists("coch", $context) ? $context["coch"] : (function () { throw new RuntimeError('Variable "coch" does not exist.', 58, $this->source); })()), "id", [], "any", false, false, false, 58)]), "html", null, true);
+        // line 63
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["coch"]) || array_key_exists("coch", $context) ? $context["coch"] : (function () { throw new RuntimeError('Variable "coch" does not exist.', 63, $this->source); })()), "id", [], "any", false, false, false, 63)]), "html", null, true);
         echo "\">Editar</a>
                 </button>
                 ";
-        // line 60
+        // line 65
         echo twig_include($this->env, $context, "coches/_delete_form.html.twig");
         echo "
         </form>
@@ -237,7 +245,7 @@ class __TwigTemplate_2ad0efbd736d47cd443341ad18f04fcd extends Template
 
     public function getDebugInfo()
     {
-        return array (  212 => 60,  207 => 58,  200 => 54,  191 => 48,  184 => 44,  177 => 40,  170 => 36,  163 => 32,  156 => 28,  149 => 24,  138 => 15,  128 => 14,  110 => 12,  95 => 6,  90 => 5,  80 => 4,  61 => 3,  38 => 1,);
+        return array (  220 => 65,  215 => 63,  208 => 59,  198 => 52,  191 => 48,  184 => 44,  177 => 40,  170 => 36,  163 => 32,  156 => 28,  149 => 24,  138 => 15,  128 => 14,  110 => 12,  95 => 6,  90 => 5,  80 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -291,6 +299,11 @@ class __TwigTemplate_2ad0efbd736d47cd443341ad18f04fcd extends Template
                             <th>Fecha_Matriculacion</th>
                             <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
                         </tr>
+                        <tr>
+                            <th>Matricula</th>
+                            <td>{{ coch.Matricula }}</td>
+                        </tr>
+                        
                     </tbody>
                 </table>
 

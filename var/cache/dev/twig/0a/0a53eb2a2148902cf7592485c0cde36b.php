@@ -153,58 +153,63 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
                     <th>NºBastidor</th>
                     <th>Fecha ITV</th>
                     <th>Fecha Matriculacion</th>
+                    <th>Matricula</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
             ";
-        // line 37
+        // line 38
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["coches"]) || array_key_exists("coches", $context) ? $context["coches"] : (function () { throw new RuntimeError('Variable "coches" does not exist.', 37, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["coches"]) || array_key_exists("coches", $context) ? $context["coches"] : (function () { throw new RuntimeError('Variable "coches" does not exist.', 38, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["coch"]) {
-            // line 38
+            // line 39
             echo "                <tr>
                     <td>";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "id", [], "any", false, false, false, 39), "html", null, true);
-            echo "</td>
-                    <td>";
             // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "Marca", [], "any", false, false, false, 40), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "id", [], "any", false, false, false, 40), "html", null, true);
             echo "</td>
                     <td>";
             // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "Modelo", [], "any", false, false, false, 41), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "Marca", [], "any", false, false, false, 41), "html", null, true);
             echo "</td>
                     <td>";
             // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "Color", [], "any", false, false, false, 42), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "Modelo", [], "any", false, false, false, 42), "html", null, true);
             echo "</td>
                     <td>";
             // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "NumeroBastidor", [], "any", false, false, false, 43), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "Color", [], "any", false, false, false, 43), "html", null, true);
             echo "</td>
                     <td>";
             // line 44
-            ((twig_get_attribute($this->env, $this->source, $context["coch"], "FechaITV", [], "any", false, false, false, 44)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "FechaITV", [], "any", false, false, false, 44), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "NumeroBastidor", [], "any", false, false, false, 44), "html", null, true);
             echo "</td>
                     <td>";
             // line 45
-            ((twig_get_attribute($this->env, $this->source, $context["coch"], "FechaMatriculacion", [], "any", false, false, false, 45)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "FechaMatriculacion", [], "any", false, false, false, 45), "Y-m-d"), "html", null, true))) : (print ("")));
+            ((twig_get_attribute($this->env, $this->source, $context["coch"], "FechaITV", [], "any", false, false, false, 45)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "FechaITV", [], "any", false, false, false, 45), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo "</td>
+                    <td>";
+            // line 46
+            ((twig_get_attribute($this->env, $this->source, $context["coch"], "FechaMatriculacion", [], "any", false, false, false, 46)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "FechaMatriculacion", [], "any", false, false, false, 46), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo "</td>
+                    <td>";
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coch"], "Matricula", [], "any", false, false, false, 47), "html", null, true);
             echo "</td>
                     <td>
 
                     <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                         <a href=\"";
-            // line 49
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_show", ["id" => twig_get_attribute($this->env, $this->source, $context["coch"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            // line 51
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_show", ["id" => twig_get_attribute($this->env, $this->source, $context["coch"], "id", [], "any", false, false, false, 51)]), "html", null, true);
             echo "\">Mostrar</a>
                     </button>
                     <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                         <a href=\"";
-            // line 52
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["coch"], "id", [], "any", false, false, false, 52)]), "html", null, true);
+            // line 54
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["coch"], "id", [], "any", false, false, false, 54)]), "html", null, true);
             echo "\">Editar</a>
                     </button>
                     </td>
@@ -213,7 +218,7 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 57
+            // line 59
             echo "                <tr>
                     <td colspan=\"8\">Resultados no encontrados</td>
                 </tr>
@@ -222,12 +227,12 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['coch'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 61
+        // line 63
         echo "            </tbody>
         </table>
         <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
             <a href=\"";
-        // line 64
+        // line 66
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_coches_new");
         echo "\">Crear Nuevo</a>
         </button>
@@ -257,7 +262,7 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
 
     public function getDebugInfo()
     {
-        return array (  231 => 64,  226 => 61,  217 => 57,  207 => 52,  201 => 49,  194 => 45,  190 => 44,  186 => 43,  182 => 42,  178 => 41,  174 => 40,  170 => 39,  167 => 38,  162 => 37,  141 => 18,  131 => 17,  120 => 14,  110 => 13,  95 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  236 => 66,  231 => 63,  222 => 59,  212 => 54,  206 => 51,  199 => 47,  195 => 46,  191 => 45,  187 => 44,  183 => 43,  179 => 42,  175 => 41,  171 => 40,  168 => 39,  163 => 38,  141 => 18,  131 => 17,  120 => 14,  110 => 13,  95 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -294,6 +299,7 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
                     <th>NºBastidor</th>
                     <th>Fecha ITV</th>
                     <th>Fecha Matriculacion</th>
+                    <th>Matricula</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -307,6 +313,7 @@ class __TwigTemplate_02ca42c429b44ba5e664f9fd1306d639 extends Template
                     <td>{{ coch.NumeroBastidor }}</td>
                     <td>{{ coch.FechaITV ? coch.FechaITV|date('Y-m-d') : '' }}</td>
                     <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
+                    <td>{{ coch.Matricula }}</td>
                     <td>
 
                     <button id=\"style-buttonindex\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">

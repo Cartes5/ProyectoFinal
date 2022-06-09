@@ -30,6 +30,7 @@
                     <th>NºBastidor</th>
                     <th>Fecha ITV</th>
                     <th>Fecha Matriculacion</th>
+                    <th>Matricula</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -43,6 +44,7 @@
                     <td>{{ coch.NumeroBastidor }}</td>
                     <td>{{ coch.FechaITV ? coch.FechaITV|date('Y-m-d') : '' }}</td>
                     <td>{{ coch.FechaMatriculacion ? coch.FechaMatriculacion|date('Y-m-d') : '' }}</td>
+                    <td>{{ coch.Matricula }}</td>
                     <td>
 
                     <button id="style-buttonindex" class="btn btn-block btn-success submit-button" type="submit">

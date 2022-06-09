@@ -59,6 +59,6 @@ class __TwigTemplate_944d3d007b210b3a07e056b597f78bc7 extends Template
 
     public function getSourceContext()
     {
-        return new Source("", "menufooter.html.twig", "/var/www/html/ProyectoFinal-1/templates/menufooter.html.twig");
+        return new Source("", "menufooter.html.twig", "/var/www/html/ProyectoFinal/templates/menufooter.html.twig");
     }
 }

@@ -1671,6 +1671,6 @@ class __TwigTemplate_6631d020687c9bd4cc76ada75c2de65c extends Template
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/var/www/html/ProyectoFinal-1/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/var/www/html/ProyectoFinal/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

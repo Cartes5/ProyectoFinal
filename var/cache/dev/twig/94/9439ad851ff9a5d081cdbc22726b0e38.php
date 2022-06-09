@@ -216,6 +216,6 @@ class __TwigTemplate_6c38e8d4f00178a811a023df13cece8b extends Template
 \t\t<div class=\"ruedas7\"> </div>
 \t</div>
 </div>
-{% endblock %}", "home/index.html.twig", "/var/www/html/ProyectoFinal-1/templates/home/index.html.twig");
+{% endblock %}", "home/index.html.twig", "/var/www/html/ProyectoFinal/templates/home/index.html.twig");
     }
 }

@@ -91,7 +91,7 @@ class __TwigTemplate_e8c10d0f3a704b2d4a6103e30df86c50 extends Template
         echo "
     ";
         // line 6
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("control");
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("style");
         echo "
     <style>
     
@@ -116,11 +116,11 @@ class __TwigTemplate_e8c10d0f3a704b2d4a6103e30df86c50 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 13
-        echo "<div class=\"mantenimiento-container\">
-    <div id=\"mantenimiento-checkout1\">
+        echo "<div class=\"style-container\">
+    <div id=\"style-checkout1\">
         <h1>Mantenimiento</h1>
 
-        <form class=\"mantenimiento-form\" action=\"submit\">
+        <form class=\"style-form\" action=\"submit\">
             <table class=\"table\">
                 <tbody>
                     <tr>
@@ -181,14 +181,14 @@ class __TwigTemplate_e8c10d0f3a704b2d4a6103e30df86c50 extends Template
                     </tr>
                 </tbody>
             </table>
-            <button id=\"mantenimiento-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"";
         // line 55
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_control_index");
         echo "\">Volver Lista</a>
             </button>
 
-            <button id=\"mantenimiento-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"";
         // line 59
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_control_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["control"]) || array_key_exists("control", $context) ? $context["control"] : (function () { throw new RuntimeError('Variable "control" does not exist.', 59, $this->source); })()), "id", [], "any", false, false, false, 59)]), "html", null, true);
@@ -234,18 +234,18 @@ class __TwigTemplate_e8c10d0f3a704b2d4a6103e30df86c50 extends Template
 {% block title %}Control{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('control') }}
+    {{ encore_entry_link_tags('style') }}
     <style>
     
     </style>
 {% endblock %}
 
 {% block body %}
-<div class=\"mantenimiento-container\">
-    <div id=\"mantenimiento-checkout1\">
+<div class=\"style-container\">
+    <div id=\"style-checkout1\">
         <h1>Mantenimiento</h1>
 
-        <form class=\"mantenimiento-form\" action=\"submit\">
+        <form class=\"style-form\" action=\"submit\">
             <table class=\"table\">
                 <tbody>
                     <tr>
@@ -282,11 +282,11 @@ class __TwigTemplate_e8c10d0f3a704b2d4a6103e30df86c50 extends Template
                     </tr>
                 </tbody>
             </table>
-            <button id=\"mantenimiento-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"{{ path('app_control_index') }}\">Volver Lista</a>
             </button>
 
-            <button id=\"mantenimiento-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
+            <button id=\"style-button\" class=\"btn btn-block btn-success submit-button\" type=\"submit\">
                 <a href=\"{{ path('app_control_edit', {'id': control.id}) }}\">Editar</a>
             </button>
             {{ include('control/_delete_form.html.twig') }}

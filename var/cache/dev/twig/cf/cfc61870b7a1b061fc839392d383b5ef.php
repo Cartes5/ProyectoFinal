@@ -212,6 +212,6 @@ class __TwigTemplate_0253366438c29e221e9f95c6a11d4e13 extends Template
     {{ include('menufooter.html.twig') }}
 
 </body>
-</html>", "baselogin.html.twig", "/var/www/html/ProyectoFinal-1/templates/baselogin.html.twig");
+</html>", "baselogin.html.twig", "/var/www/html/ProyectoFinal/templates/baselogin.html.twig");
     }
 }
